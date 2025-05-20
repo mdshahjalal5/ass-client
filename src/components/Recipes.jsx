@@ -1,11 +1,21 @@
-import { useLoaderData } from "react-router";
+import { useLoaderData, useLocation } from "react-router";
+import Recipe from "./Recipe";
 
 const Recipes = () => {
-  const data = useLoaderData().data;
-  console.log(data, "Recipes.jsx", 6);
+  const initialRecipes = useLoaderData().data;
+
+  const location = useLocation();
+  console.log(location, "Recipes.jsx", 9);
   return (
     <div>
-      <h1>Total Recipes: {data.length}</h1>
+      {location.pathname === "/all-recipes" ? (
+        <h1>Total Recipes: {initialRecipes.length}</h1>
+      ) : null}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {initialRecipes.map((r) => (
+          <Recipe key={r._id} recipe={r} />
+        ))}
+      </div>{" "}
     </div>
   );
 };

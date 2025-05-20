@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import RecipeDetails from "../pages/RecipeDetails";
 import App from "../App";
 import Layout from "../Layout/Layout";
 import Errorpage from "../components/Errorpage";
@@ -6,12 +7,10 @@ import Login from "../pages/Login";
 import RegisterPage from "../pages/Register";
 import AuthLayout from "../Layout/AuthLayout";
 import TermsAndConditions from "../pages/TermsCondintion";
-import ServiceDetail from "../pages/ServiceDetails";
 import ForgotPassword from "../pages/ForgotPassword";
 import MyProfile from "../pages/MyProfile";
 import UpdateProfile from "../pages/UpdateProfile";
 import PrivateRoute from "./PrivateRoute";
-import BlogsPage from "../components/Blog";
 import AddRecipe from "../pages/AddRecipe";
 import Recipes from "../components/Recipes";
 
@@ -23,30 +22,30 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
+        loader: () => fetch("http://localhost:5000/api/v1/recipes?limit=0"),
         element: <App />,
       },
       {
         path: "/add-recipe",
         element: (
           <PrivateRoute>
-            <AddRecipe />{" "}
+            <AddRecipe />
           </PrivateRoute>
         ),
       },
       {
         path: "/all-recipes",
-        loader: () =>
-          fetch(
-            "https://recipe-server-7lx42jtkj-sj3sj3s-projects.vercel.app/api/v1/recipes",
-          ),
+        loader: () => fetch("http://localhost:5000/api/v1/recipes?limit=0"),
         element: <Recipes />,
       },
+
       {
-        path: "/services/:id",
-        loader: () => fetch("/data2.json"),
+        path: "/recipes/:id",
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/api/v1/recipe/${params.id}`),
         element: (
           <PrivateRoute>
-            <ServiceDetail />
+            <RecipeDetails />
           </PrivateRoute>
         ),
       },
@@ -59,14 +58,6 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <MyProfile />
-          </PrivateRoute>
-        ),
-      },
-      {
-        path: "blogs",
-        element: (
-          <PrivateRoute>
-            <BlogsPage />
           </PrivateRoute>
         ),
       },
