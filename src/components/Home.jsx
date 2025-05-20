@@ -10,7 +10,7 @@ const Home = () => {
       <Helmet>
         <title>Home || Subscription Box</title>
       </Helmet>
-      <div className="mb-10">
+      <div className="mb-10  bg-gray-100 shadow-2xl p-1 rounded-xl max-sm:h-[50vh]">
         <Slider />
       </div>
       <SubscriptionServices />

@@ -12,6 +12,8 @@ import MyProfile from "../pages/MyProfile";
 import UpdateProfile from "../pages/UpdateProfile";
 import PrivateRoute from "./PrivateRoute";
 import BlogsPage from "../components/Blog";
+import AddRecipe from "../pages/AddRecipe";
+import Recipes from "../components/Recipes";
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +24,22 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <App />,
+      },
+      {
+        path: "/add-recipe",
+        element: (
+          <PrivateRoute>
+            <AddRecipe />{" "}
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/all-recipes",
+        loader: () =>
+          fetch(
+            "https://recipe-server-7lx42jtkj-sj3sj3s-projects.vercel.app/api/v1/recipes",
+          ),
+        element: <Recipes />,
       },
       {
         path: "/services/:id",

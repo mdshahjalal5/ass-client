@@ -4,7 +4,19 @@ const links = [
     path: "/",
   },
   {
-    label: "My Profile",
+    label: "Add Recipe",
+    path: "/add-recipe",
+  },
+  {
+    label: "All Recipes",
+    path: "/all-recipes",
+  },
+  {
+    label: "My Recipes",
+    path: "/my-recipes",
+  },
+  {
+    label: "Profile",
     path: "/my-profile",
   },
   {

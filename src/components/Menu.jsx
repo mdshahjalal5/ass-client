@@ -1,5 +1,6 @@
 import { NavLink, Link } from "react-router-dom";
 import { links } from "../constant";
+import { useMediaQuery } from "react-responsive";
 
 const Menu = ({ className, isExternal }) => {
   return (

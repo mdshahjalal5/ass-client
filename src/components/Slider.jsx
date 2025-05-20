@@ -16,7 +16,6 @@ const Slider = () => {
       navigation
       pagination={{ clickable: true }}
       loop={true}
-      slidesPerView={mobile ? 1 : 2}
       autoplay={{
         delay: 1000,
         disableOnInteraction: false,
@@ -25,30 +24,30 @@ const Slider = () => {
       <SwiperSlide>
         <Link to="/doctor-profile">
           <img
-            className="w-full h-[60vh] rounded-xl shadow-xl"
-            src="https://images.deepai.org/art-image/e00bdfc5fd4e418e92dbeb7076ccf0f3/a-modern-smart-home-interior-showcasing-iot-devices-a.jpg"
+            className="w-full h-[70vh] max-sm:h-[50vh] max-sm:h-[50vh] rounded-xl shadow-xl"
+            src="https://images.deepai.org/art-image/2f454155dda24c3092d82313c5418387/a-traditional-bangladeshi-beef-tehari-served-on-a-whi.jpg"
             alt="Slide 1"
           />
         </Link>
       </SwiperSlide>
       <SwiperSlide>
         <img
-          src="https://images.deepai.org/art-image/4fcd36c7c84e4f2ab532ef7f373ab6ef/a-tech-enthusiast-s-workspace-with-dual-monitors-circ.jpg"
-          className="w-full h-[60vh] rounded-xl shadow-xl"
+          src="https://images.deepai.org/art-image/dab0727e89d749f181a2b26550ba8ee8/hilsa-fish-cooked-in-mustard-sauce-shorshe-ilish-serv.jpg"
+          className="w-full h-[70vh] max-sm:h-[50vh] rounded-xl shadow-xl"
           alt="Slide 2"
         />
       </SwiperSlide>
       <SwiperSlide>
         <img
-          src="https://images.deepai.org/art-image/3939882b488542189113a6554b726969/a-vr-user-in-a-futuristic-living-room-wearing-a-heads.jpg"
-          className="w-full h-[60vh] rounded-xl shadow-xl"
+          src="https://images.deepai.org/art-image/d95e3d7921f1457f832c3ce005c26946/white-chicken-curry-bangladeshi-chicken-rezala-in-a-c.jpg"
+          className="w-full h-[70vh] max-sm:h-[50vh] rounded-xl shadow-xl"
           alt="Slide 3"
         />
       </SwiperSlide>
       <SwiperSlide>
         <img
-          src="https://images.deepai.org/art-image/ab55c939ecb24ad69d17f808a51b8874/a-3d-printer-in-action-printing-a-mechanical-part-clo.jpg"
-          className="w-full h-[60vh] rounded-xl shadow-xl"
+          src="https://images.deepai.org/art-image/747917527f894e3982dd1b95d9d299da/bangladeshi-prawn-coconut-curry-chingri-malai-curry-p.jpg"
+          className="w-full h-[70vh] max-sm:h-[50vh] rounded-xl shadow-xl"
           alt="Slide 3"
         />
       </SwiperSlide>
