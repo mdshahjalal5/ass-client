@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Kaushan+Script&display=swap");
+@import "tailwindcss";
+@plugin "daisyui";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
+
+  .max-container {
+    @apply max-w-[1440px] mx-auto max-sm:px-1 sm:px-8;
+  }
+
+  .grad-orange {
+    @apply bg-gradient-to-r from-sky-100 to-red-100;
+  }
+  .grad-2 {
+    @apply bg-gradient-to-l from-purple-100 to-purple-50;
+  }
+}
+
+.active {
+  color: red;
+}
