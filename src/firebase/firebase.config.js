@@ -14,19 +14,21 @@ import { getAuth } from "firebase/auth";
   appId: import.meta.env.VITE_APPID,
 }; */
 
+//email:healthcare  flavor-book
 const firebaseConfig = {
-  apiKey: "AIzaSyBtmIij7mAaXMauuhArfOulMZrg9v6ibtA",
+  apiKey: "AIzaSyB3PeX13tBoQ65pO9kRKulB8n9PpiZIabg",
 
-  authDomain: "winter-box.firebaseapp.com",
+  authDomain: "flavor-book-6e9a8.firebaseapp.com",
 
-  projectId: "winter-box",
+  projectId: "flavor-book-6e9a8",
 
-  storageBucket: "winter-box.firebasestorage.app",
+  storageBucket: "flavor-book-6e9a8.firebasestorage.app",
 
-  messagingSenderId: "695996750944",
+  messagingSenderId: "799865113025",
 
-  appId: "1:695996750944:web:cf52ca3d8b2f0cfbe77705",
+  appId: "1:799865113025:web:54983dd84f850eea1c4740",
 };
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
