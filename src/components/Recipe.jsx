@@ -5,7 +5,6 @@ import Button from "./Button";
 const Recipe = ({ recipe }) => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
-  console.log(pathname, "Recipe.jsx", 8);
 
   const { image, title, cuisine, likeCount } = recipe;
   const [isImageValid, setIsImageValid] = useState(true);

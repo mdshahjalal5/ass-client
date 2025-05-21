@@ -2,16 +2,12 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import useFetch from "../hooks/Usefetch";
 import Recipe from "../components/Recipe";
-import Button from "../components/Button";
-import { Link, useLocation } from "react-router";
 import NoRecipe from "./NoRecipe";
 
 const MyRecipes = () => {
   const { user } = useContext(AuthContext);
-  console.log(user?.email, "MyRecipes.jsx", 6);
 
   const [recipes, setRecipes] = useState([]);
-  console.log(recipes, "MyRecipes.jsx", 10);
 
   const { data, loading } = useFetch(
     `http://localhost:5000/api/v1/recipes?email=${user?.email}&limit=0`,
@@ -25,7 +21,6 @@ const MyRecipes = () => {
   return (
     <div>
       <div className="mt-7">
-        {" "}
         {user?.displayName ? (
           <h1 className="font-bold text-sky-400 text-2xl">
             Recipes of{" "}
