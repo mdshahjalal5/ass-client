@@ -2,13 +2,16 @@ import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import Button from "./Button";
 
-const Recipe = ({ recipe }) => {
+const Recipe = ({ recipe, setRecipes }) => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
 
   const { image, title, cuisine, likeCount } = recipe;
   const [isImageValid, setIsImageValid] = useState(true);
 
+  const hanldeDelete = (id) => {
+    console.log("delete", id);
+  };
   return (
     <div className="border rounded-lg shadow hover:shadow-md transition duration-300 max-w-[350px] shadow-xl border-sky-500 bg-gradient-to-b from-gray-300 to-gray-100 max-sm:min-w-[270px]">
       <img
@@ -29,7 +32,10 @@ const Recipe = ({ recipe }) => {
                 <Button label={"Update "} className={"w-full"} />
               </Link>
             </div>
-            <div className="flex-1  text-white">
+            <div
+              onClick={() => hanldeDelete(recipe?._id)}
+              className="flex-1  text-white "
+            >
               <Button label={"Delete"} className={"flex-1 w-full"} />
             </div>
           </div>

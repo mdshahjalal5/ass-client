@@ -2,9 +2,12 @@ import { Link, useLoaderData, useLocation } from "react-router";
 
 import Recipe from "./Recipe";
 import Button from "./Button";
+import { useState } from "react";
 
 const Recipes = () => {
   const initialRecipes = useLoaderData().data;
+
+  const [recipes, setRecipes] = useState(initialRecipes);
 
   const location = useLocation();
   console.log(location, "Recipes.jsx", 9);
@@ -13,17 +16,15 @@ const Recipes = () => {
       {location.pathname === "/all-recipes" ? (
         <h1 className="text-gray-500 font-bold text-xl my-5">
           Total Recipes:{" "}
-          {initialRecipes.length > 9
-            ? initialRecipes.length
-            : "0" + initialRecipes.length}
+          {recipes.length > 9 ? recipes.length : "0" + recipes.length}
         </h1>
       ) : null}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        {initialRecipes.map((r) => (
-          <Recipe key={r._id} recipe={r} />
+        {recipes.map((r) => (
+          <Recipe key={r._id} recipe={r} setRecipes={setRecipes} />
         ))}
       </div>
-      {location.pathname == "/" && initialRecipes.length > 5 && (
+      {location.pathname == "/" && recipes.length > 5 && (
         <div className="flex justify-center items-center mt-7 pb-3">
           <Link to="/all-recipes">
             <Button label={"View More"} className={"text-white"} />
