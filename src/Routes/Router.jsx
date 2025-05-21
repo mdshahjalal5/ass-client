@@ -112,3 +112,6 @@ export const router = createBrowserRouter([
     Component: RegisterPage,
   },
 ]);
+//# Remove node_modules from the Git index (staging area)
+//git rm -r --cached node_modules
+//
