@@ -2,7 +2,7 @@ const Recipe = ({ recipe }) => {
   const { image, title, cuisine, likeCount } = recipe;
 
   return (
-    <div className="border rounded-lg shadow hover:shadow-md transition duration-300 max-w-[350px] shadow-xl border-sky-500">
+    <div className="border rounded-lg shadow hover:shadow-md transition duration-300 max-w-[350px] shadow-xl border-sky-500  bg-gradient-to-b from-gray-300 to-gray-100">
       <img
         src={image || "https://via.placeholder.com/400x250?text=No+Image"}
         alt={title}

@@ -1,9 +1,9 @@
 import Slider from "./Slider";
+import { Typewriter } from "react-simple-typewriter";
 import { Helmet } from "react-helmet-async";
 import Testimonial from "./Testimonial";
-import Recipe from "./Recipe";
 import Recipes from "./Recipes";
-const Home = ({ recipes }) => {
+const Home = () => {
   return (
     <div>
       <Helmet>
@@ -15,7 +15,15 @@ const Home = ({ recipes }) => {
 
       <div className="">
         <h2 className="text-2xl font-bold my-9 w-4/5 mx-auto text-center text-gray-400 ">
-          🔥 These recipes are on fire!
+          <Typewriter
+            words={["🔥 These recipes are on fire!"]}
+            loop={0}
+            cursor
+            cursorStyle="...✍️"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1800}
+          />
           <span className="hidden sm:block text-xl font-normal mt-1">
             Check out the ones that everyone’s been liking lately – maybe you’ll
             find your next favorite dish.

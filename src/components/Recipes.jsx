@@ -9,7 +9,12 @@ const Recipes = () => {
   return (
     <div>
       {location.pathname === "/all-recipes" ? (
-        <h1>Total Recipes: {initialRecipes.length}</h1>
+        <h1 className="text-gray-500 font-bold text-xl my-5">
+          Total Recipes:{" "}
+          {initialRecipes.length > 9
+            ? initialRecipes.length
+            : "0" + initialRecipes.length}
+        </h1>
       ) : null}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {initialRecipes.map((r) => (
