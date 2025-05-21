@@ -13,6 +13,7 @@ import UpdateProfile from "../pages/UpdateProfile";
 import PrivateRoute from "./PrivateRoute";
 import AddRecipe from "../pages/AddRecipe";
 import Recipes from "../components/Recipes";
+import MyRecipes from "../pages/MyRecipes";
 
 export const router = createBrowserRouter([
   {
@@ -22,7 +23,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        loader: () => fetch("http://localhost:5000/api/v1/recipes?limit=0"),
+        loader: () => fetch("http://localhost:5000/api/v1/recipes?limit=6"),
         element: <App />,
       },
       {
@@ -39,6 +40,14 @@ export const router = createBrowserRouter([
         element: <Recipes />,
       },
 
+      {
+        path: "/my-recipes",
+        element: (
+          <PrivateRoute>
+            <MyRecipes />
+          </PrivateRoute>
+        ),
+      },
       {
         path: "/recipes/:id",
         loader: ({ params }) =>
