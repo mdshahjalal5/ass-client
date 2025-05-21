@@ -2,6 +2,8 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import useFetch from "../hooks/Usefetch";
 import Recipe from "../components/Recipe";
+import Button from "../components/Button";
+import { Link } from "react-router";
 
 const MyRecipes = () => {
   const { user } = useContext(AuthContext);
@@ -41,8 +43,24 @@ const MyRecipes = () => {
         </div>
       )}
 
-      {recipes.length > 0 &&
-        recipes.map((r) => <Recipe key={r._id} recipe={r} />)}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-10">
+        {recipes.length > 0 ? (
+          recipes.map((r) => <Recipe key={r._id} recipe={r} />)
+        ) : (
+          <>
+            <div className="border rounded-lg shadow hover:shadow-md transition duration-300  shadow-xl border-sky-500  bg-gradient-to-b from-gray-300 to-gray-100 mx-auto mt-10 p-5 w-fit">
+              <h1 className="text-gray-500 text-xl">
+                You have no recipes, please add one
+              </h1>
+              <div className="text-center">
+                <Link to="/add-recipe">
+                  <Button label={"Add Recipe"} className={"text-white mt-2"} />
+                </Link>
+              </div>
+            </div>
+          </>
+        )}
+      </div>
     </div>
   );
 };

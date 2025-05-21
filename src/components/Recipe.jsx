@@ -15,7 +15,7 @@ const Recipe = ({ recipe }) => {
         <p className="text-sm text-gray-600">Likes: {likeCount}</p>
 
         <button
-          className="mt-2 w-full bg-blue-600 text-white py-1 px-3 rounded hover:bg-blue-700 text-sm"
+          className="mt-2 w-full bg-purple-500 text-white py-2 px-3 rounded hover:bg-purple-700 text-sm"
           onClick={() => (window.location.href = `/recipes/${recipe._id}`)}
         >
           View Details

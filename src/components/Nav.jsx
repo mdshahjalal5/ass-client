@@ -12,7 +12,7 @@ const Nav = () => {
   const { user, logout, loading } = useContext(AuthContext);
   return (
     <header className="p-4  max-container sticky z-10 top-2">
-      <nav className="flex-between  p-2 rounded-xl sticky z-[1000]  bg-gray-200">
+      <nav className="flex-between  p-2 rounded-xl sticky z-[1000] bg-gradient-to-r from-orange-50 to-red-50  ">
         <Brand />
         {/* desktop device menu */}
         <Menu
@@ -29,7 +29,7 @@ const Nav = () => {
                   <Link title={user.displayName} to="/my-profile">
                     <img
                       src={user.photoURL}
-                      className="h-10 w-10 rounded-full border p-[2px]"
+                      className="h-7 w-7 rounded-full border p-[2px]"
                     />
                   </Link>
                 ) : (
