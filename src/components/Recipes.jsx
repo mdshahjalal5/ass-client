@@ -1,6 +1,7 @@
-import { useLoaderData, useLocation } from "react-router";
+import { Link, useLoaderData, useLocation } from "react-router";
 
 import Recipe from "./Recipe";
+import Button from "./Button";
 
 const Recipes = () => {
   const initialRecipes = useLoaderData().data;
@@ -21,7 +22,14 @@ const Recipes = () => {
         {initialRecipes.map((r) => (
           <Recipe key={r._id} recipe={r} />
         ))}
-      </div>{" "}
+      </div>
+      {location.pathname == "/" && initialRecipes.length > 5 && (
+        <div className="flex justify-center items-center mt-7 pb-3">
+          <Link to="/all-recipes">
+            <Button label={"View More"} className={"text-white"} />
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

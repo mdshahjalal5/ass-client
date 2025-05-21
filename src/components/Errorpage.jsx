@@ -1,7 +1,5 @@
 import { useNavigate, useRouteError } from "react-router-dom";
-import { notfound3 } from "../assets";
 import Button from "./Button";
-import Nav from "./Nav";
 
 const Errorpage = () => {
   const error = useRouteError();
@@ -16,7 +14,9 @@ const Errorpage = () => {
           </h1>
 
           <img
-            src={notfound3}
+            src={
+              "https://images.deepai.org/art-image/b6e5bbc549784002bd10642c72b68412/a-creative-and-humorous-404-not-found-illustration-wi.jpg"
+            }
             className="max-w-[400px] rounded-2xl drop-shadow-2xl"
           />
           <div className="flex gap-6  w-full">
@@ -26,7 +26,7 @@ const Errorpage = () => {
                 className={"transform  w-full text-white"}
               />
             </div>
-            <div className="flex-1 " onClick={() => navigate(navigate(-1))}>
+            <div className="flex-1" onClick={() => navigate(-1)}>
               <Button
                 label={"Go Back"}
                 className={"transform  flex-1 w-full text-white"}
