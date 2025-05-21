@@ -3,7 +3,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import useFetch from "../hooks/Usefetch";
 import Recipe from "../components/Recipe";
 import Button from "../components/Button";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import NoRecipe from "./NoRecipe";
 
 const MyRecipes = () => {

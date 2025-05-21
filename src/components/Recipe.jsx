@@ -1,40 +1,12 @@
-/* import { useNavigate } from "react-router";
-
-const Recipe = ({ recipe }) => {
-  const navigate = useNavigate();
-  const { image, title, cuisine, likeCount } = recipe;
-
-  return (
-    <div className="border rounded-lg shadow hover:shadow-md transition duration-300 max-w-[350px] shadow-xl border-sky-500 bg-gradient-to-b from-gray-300 to-gray-100 max-sm:min-w-[270px]">
-      <div className={`${image ? "" : "h-[200px] w-[200px] border"}`}>
-        <img
-          src={image || "https://via.placeholder.com/400x250?text=No+Image"}
-          alt={title}
-          className="w-[200px] object-cover rounded-lg shadow-xl mx-auto mt-2"
-        />
-      </div>
-      <div className="p-4 space-y-2">
-        <h3 className="text-lg font-semibold">{title}</h3>
-        <p className="text-sm text-gray-600">Cuisine: {cuisine}</p>
-        <p className="text-sm text-gray-600">Likes: {likeCount}</p>
-        <button
-          className="mt-2 w-full bg-purple-500 text-white py-2 px-3 rounded hover:bg-purple-700 text-sm"
-          onClick={() => navigate(`/recipes/${recipe._id}`)}
-        >
-          View Details
-        </button>
-      </div>
-    </div>
-  );
-};
-
-export default Recipe; */
-
 import { useState } from "react";
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
+import Button from "./Button";
 
 const Recipe = ({ recipe }) => {
   const navigate = useNavigate();
+  const { pathname } = useLocation();
+  console.log(pathname, "Recipe.jsx", 8);
+
   const { image, title, cuisine, likeCount } = recipe;
   const [isImageValid, setIsImageValid] = useState(true);
 
@@ -51,8 +23,18 @@ const Recipe = ({ recipe }) => {
         <h3 className="text-lg font-semibold">{title}</h3>
         <p className="text-sm text-gray-600">Cuisine: {cuisine}</p>
         <p className="text-sm text-gray-600">Likes: {likeCount}</p>
+        {pathname == "/my-recipes" && (
+          <div className="flex gap-3 flex-col">
+            <div className="flex-1 text-white">
+              <Button label={"Update "} className={"w-full"} />
+            </div>
+            <div className="flex-1  text-white">
+              <Button label={"Delete"} className={"flex-1 w-full"} />
+            </div>
+          </div>
+        )}
         <button
-          className="mt-2 w-full bg-purple-500 text-white py-2 px-3 rounded hover:bg-purple-700 text-sm"
+          className=" w-full btn btn-outline btn-primary 500   rounded hover:bg-purple-700 text-sm rounded-full"
           onClick={() => navigate(`/recipes/${recipe._id}`)}
         >
           View Details
