@@ -14,6 +14,7 @@ import PrivateRoute from "./PrivateRoute";
 import AddRecipe from "../pages/AddRecipe";
 import Recipes from "../components/Recipes";
 import MyRecipes from "../pages/MyRecipes";
+import UpdateRecipe from "../pages/UpdateRecipe";
 
 export const router = createBrowserRouter([
   {
@@ -45,6 +46,14 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <MyRecipes />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "update/:id",
+        element: (
+          <PrivateRoute>
+            <UpdateRecipe />
           </PrivateRoute>
         ),
       },
