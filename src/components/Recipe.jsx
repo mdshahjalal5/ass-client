@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLocation, useNavigate } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import Button from "./Button";
 
 const Recipe = ({ recipe }) => {
@@ -26,7 +26,9 @@ const Recipe = ({ recipe }) => {
         {pathname == "/my-recipes" && (
           <div className="flex gap-3 flex-col">
             <div className="flex-1 text-white">
-              <Button label={"Update "} className={"w-full"} />
+              <Link to={`/update/${recipe._id}`}>
+                <Button label={"Update "} className={"w-full"} />
+              </Link>
             </div>
             <div className="flex-1  text-white">
               <Button label={"Delete"} className={"flex-1 w-full"} />
