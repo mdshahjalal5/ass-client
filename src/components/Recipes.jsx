@@ -21,7 +21,12 @@ const Recipes = () => {
       ) : null}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {recipes.map((r) => (
-          <Recipe key={r._id} recipe={r} setRecipes={setRecipes} />
+          <Recipe
+            key={r._id}
+            recipe={r}
+            setRecipes={setRecipes}
+            recipes={recipes}
+          />
         ))}
       </div>
       {location.pathname == "/" && recipes.length > 5 && (

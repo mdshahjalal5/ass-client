@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
 import toast from "react-hot-toast";
+import Swal from "sweetalert2";
 
 const LoginPage = () => {
   const { googleLogin, login } = useContext(AuthContext);
@@ -26,7 +27,13 @@ const LoginPage = () => {
     try {
       await login(email, password);
       setTimeout(() => {
-        toast.success("Logged in successfully!");
+        Swal.fire({
+          icon: "success",
+          timer: 1000,
+          title: "Success",
+          text: "Successfully logged in!",
+          showConfirmButton: false,
+        });
         navigate(from, {
           replace: true,
         }),
@@ -40,7 +47,13 @@ const LoginPage = () => {
   const handleGoogleLogin = async () => {
     try {
       await googleLogin();
-      navigate("/");
+      setTimeout(() => {
+        toast.success("Logged in successfully!");
+        navigate(from, {
+          replace: true,
+        }),
+          1500;
+      });
     } catch (err) {
       setError("Google login failed.");
       console.error(err);

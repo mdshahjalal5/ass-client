@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../provider/AuthProvider";
 import { EyeIcon, EyeOffIcon } from "lucide-react";
@@ -8,6 +8,7 @@ import { EyeIcon, EyeOffIcon } from "lucide-react";
 const RegisterPage = () => {
   const { createUser, updateUser, googleLogin } = useContext(AuthContext);
 
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
 
   const [error, setError] = useState("");
@@ -35,6 +36,7 @@ const RegisterPage = () => {
       return;
     }
 
+    setError("");
     createUser(email, password)
       .then(() => {
         updateUser(name, photoUrl)
@@ -43,18 +45,30 @@ const RegisterPage = () => {
             form.reset();
           })
           .catch((error) => {
-            Swal.fire("Error", error.message, "error");
+            setError(error.message);
           });
       })
       .catch((error) => {
-        Swal.fire("Error", error.message, "error");
+        console.log(`error`, error);
       });
   };
 
   const handleGoogleSignup = () => {
     googleLogin()
       .then(() => {
-        Swal.fire("Success", "Logged in with Google!", "success");
+        setTimeout(() => {
+          Swal.fire({
+            icon: "success",
+            timer: 1000,
+            title: "Success",
+            text: "Successfully logged in!",
+            showConfirmButton: false,
+          });
+          navigate(from, {
+            replace: true,
+          }),
+            1500;
+        });
       })
       .catch((err) => {
         Swal.fire("Error", err.message, "error");
@@ -177,6 +191,11 @@ const RegisterPage = () => {
             </Link>
           </p>
         </div>
+        {error && (
+          <h2 className="text-red-500 mt-4 font-semibold capitalize">
+            {error}
+          </h2>
+        )}
       </div>
     </div>
   );

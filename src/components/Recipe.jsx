@@ -1,16 +1,41 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import Button from "./Button";
+import Swal from "sweetalert2";
 
-const Recipe = ({ recipe, setRecipes }) => {
+const Recipe = ({ recipe, setRecipes = () => {}, recipes = [] }) => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
 
   const { image, title, cuisine, likeCount } = recipe;
   const [isImageValid, setIsImageValid] = useState(true);
 
-  const hanldeDelete = (id) => {
+  const hanldeDelete = async (id) => {
     console.log("delete", id);
+
+    const res = await fetch(`http://localhost:5000/api/v1/recipe/${id}`, {
+      method: "DELETE",
+    });
+    if (!res.ok) {
+      throw new Error(
+        `Failed to delete recipe, status:${res.status}, ${res.statusText}`,
+      );
+    }
+
+    const result = await res.json();
+    if (result?.data?.deletedCount) {
+      if (setRecipes && typeof setRecipes === "function") {
+        setRecipes(recipes.filter((r) => r._id !== id));
+      }
+
+      Swal.fire({
+        title: "Success",
+        text: "Recipe deleted successfully",
+        icon: "success",
+        timer: 1000,
+        showConfirmButton: false,
+      });
+    }
   };
   return (
     <div className="border rounded-lg shadow hover:shadow-md transition duration-300 max-w-[350px] shadow-xl border-sky-500 bg-gradient-to-b from-gray-300 to-gray-100 max-sm:min-w-[270px]">
