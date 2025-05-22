@@ -65,7 +65,7 @@ const Footerr = () => {
               </Link>
             </li>
             <li>
-              <Link to="/privacy" className="hover:text-orange-600">
+              <Link to="/privacy-policy" className="hover:text-orange-600">
                 Privacy Policy
               </Link>
             </li>

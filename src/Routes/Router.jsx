@@ -16,6 +16,7 @@ import Recipes from "../components/Recipes";
 import MyRecipes from "../pages/MyRecipes";
 import UpdateRecipe from "../pages/UpdateRecipe";
 import FAQ from "../pages/Faq";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
 
 export const router = createBrowserRouter([
   {
@@ -91,6 +92,10 @@ export const router = createBrowserRouter([
       {
         path: "faq",
         element: <FAQ />,
+      },
+      {
+        path: "privacy-policy",
+        element: <PrivacyPolicy />,
       },
     ],
   },
