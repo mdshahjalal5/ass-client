@@ -3,7 +3,7 @@ import { faqs } from "../constant";
 
 const FAQ = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-bl from-orange-50 to-gray-50 py-10 px-3 my-10 rounded-xl shadow-md">
+    <section className="min-h-screen  py-10 px-3 my-10 rounded-xl shadow">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-3xl md:text-4xl font-bold text-center text-orange-400 mb-12 font-kaushan">
           <Typewriter

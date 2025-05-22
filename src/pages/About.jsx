@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <section className="bg-gradient-to-br from-yellow-50 to-orange-50 min-h-screen py-20 px-6 my-10">
+    <section className="min-h-screen py-20 px-6 my-10">
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="text-3xl md:text-4xl font-bold text-orange-400 mb-6">
           About FlavorBook

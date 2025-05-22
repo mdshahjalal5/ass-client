@@ -7,10 +7,11 @@ import Swal from "sweetalert2";
 const RecipeDetails = ({ currentUser }) => {
   const { user } = useContext(AuthContext);
   const { id } = useParams();
-  const [likeCount, setLikeCount] = useState(0);
+
   const { data } = useLoaderData();
   const [recipe, setRecipe] = useState(data);
   const [isImageValid, setIsImageValid] = useState(true);
+  const [likeCount, setLikeCount] = useState(recipe?.likeCount);
 
   const handleLike = () => {
     if (user?.email == recipe?.userEmail) {
@@ -34,13 +35,11 @@ const RecipeDetails = ({ currentUser }) => {
 
   return (
     <>
-      {recipe.authorName && (
-        <h2 className="text-xl font-semibold mb-2 text-gray-600">
-          By <span className="text-sky-500">{recipe.authorName}</span>
-        </h2>
-      )}
-
-      <div className="max-w-4xl mx-auto p-6 border-[1px] rounded-xl shadow-2xl border-sky-400 mt-10">
+      <h2 className="text-xl sm:text-2xl font-semibold mb-8 text-gray-500 mt-10 text-center">
+        <span className="text-sky-500">{likeCount + " " || "No" + " "}</span>
+        People interested in this recipe.
+      </h2>
+      <div className="max-w-4xl mx-auto p-6 border-[1px] rounded-xl shadow-2xl border-sky-400 ">
         <Helmet>
           <title> Recipe Details | FlavorBook</title>
         </Helmet>
