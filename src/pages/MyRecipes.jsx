@@ -3,6 +3,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import useFetch from "../hooks/Usefetch";
 import Recipe from "../components/Recipe";
 import NoRecipe from "./NoRecipe";
+import { Helmet } from "react-helmet-async";
 
 const MyRecipes = () => {
   const { user } = useContext(AuthContext);

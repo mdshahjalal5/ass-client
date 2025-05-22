@@ -35,11 +35,10 @@ const Home = () => {
 
         <Recipes />
       </div>
+      <About />
       <FAQ />
       <FeedbackPage />
-      <About />
 
-      <Testimonial />
     </div>
   );
 };

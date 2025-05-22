@@ -15,6 +15,7 @@ import AddRecipe from "../pages/AddRecipe";
 import Recipes from "../components/Recipes";
 import MyRecipes from "../pages/MyRecipes";
 import UpdateRecipe from "../pages/UpdateRecipe";
+import FAQ from "../pages/Faq";
 
 export const router = createBrowserRouter([
   {
@@ -86,6 +87,10 @@ export const router = createBrowserRouter([
             <UpdateProfile />
           </PrivateRoute>
         ),
+      },
+      {
+        path: "faq",
+        element: <FAQ />,
       },
     ],
   },

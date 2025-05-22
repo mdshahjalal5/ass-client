@@ -1,10 +1,12 @@
 import React from "react";
-import { boxes } from "../constant";
 import { Helmet } from "react-helmet-async";
 
 const TermsAndConditions = () => {
   return (
-    <div className="bg-gradient-to-tr from-orange-100 via-yellow-50 to-orange-200 min-h-screen py-12 px-6 md:px-20">
+    <div className="min-h-screen py-12 px-6 md:px-20">
+      <Helmet>
+        <title>Terms & Conditions || FlavorBook</title>
+      </Helmet>
       <div className="max-w-4xl mx-auto bg-white shadow-2xl rounded-3xl p-8 border border-orange-300">
         <div className="text-center mb-10">
           <h1 className="text-4xl font-bold text-orange-600 mb-2">

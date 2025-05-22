@@ -19,10 +19,6 @@ const links = [
     label: "Profile",
     path: "/my-profile",
   },
-  {
-    label: "FAQ",
-    path: "/blogs",
-  },
 ];
 
 export const feedbacks = [
@@ -58,7 +54,63 @@ export const feedbacks = [
     avatar: "https://i.pravatar.cc/100?img=7",
   },
 ];
-
+export const faqs = [
+  {
+    question: "What is FlavorBook?",
+    answer:
+      "FlavorBook is a recipe-sharing platform where users can add, view, like, and save their favorite recipes from around the world.",
+  },
+  {
+    question: "Do I need to create an account?",
+    answer:
+      "Yes, to add, update, or like recipes, you'll need to register and log in. But anyone can browse publicly shared recipes.",
+  },
+  {
+    question: "Can I edit or delete my recipes?",
+    answer:
+      "Absolutely! Go to 'My Recipes' to edit or delete any recipes you’ve added.",
+  },
+  {
+    question: "What kind of recipes can I upload?",
+    answer:
+      "Anything! From traditional family dishes to your latest kitchen experiments — if it’s delicious, it belongs here.",
+  },
+  {
+    question: "How are Top Recipes selected?",
+    answer:
+      "Top Recipes are automatically selected based on the number of likes they receive from users.",
+  },
+  {
+    question: "Is there a cost to use FlavorBook?",
+    answer:
+      "Nope! FlavorBook is completely free to use — upload, browse, and enjoy recipes without any charges.",
+  },
+  {
+    question: "Can I save recipes for later?",
+    answer:
+      "Yes! Once logged in, you can like recipes to easily find them later in your saved list.",
+  },
+  {
+    question: "Are there vegetarian or dietary filter options?",
+    answer:
+      "We are working on adding filters like vegetarian, vegan, gluten-free, and more to help tailor your browsing experience.",
+  },
+  {
+    question: "Can I follow other users or chefs?",
+    answer:
+      "Not yet, but the follow/favorite feature is coming soon so you can keep track of your favorite recipe creators!",
+  },
+  {
+    question: "What should I do if I find inappropriate content?",
+    answer:
+      "You can report recipes using the flag icon or contact our support team. We take community safety seriously.",
+  },
+  {
+    question: "Can I upload images or videos with my recipe?",
+    answer:
+      "Yes! Upload a photo of your dish. Video support is on the roadmap and will be available in future updates.",
+  },
+];
 const boxes = [
   {
     id: 1,
