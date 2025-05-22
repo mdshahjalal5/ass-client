@@ -3,11 +3,14 @@ import { Typewriter } from "react-simple-typewriter";
 import { Helmet } from "react-helmet-async";
 import Testimonial from "./Testimonial";
 import Recipes from "./Recipes";
+import About from "../pages/About";
+import FAQ from "../pages/Faq";
+import FeedbackPage from "../pages/FeedbackPage";
 const Home = () => {
   return (
     <div>
       <Helmet>
-        <title>Home || Flavor Book</title>
+        <title>Home || FlavorBook</title>
       </Helmet>
       <div className="mb-20  bg-gray-100 shadow-2xl -1 rounded-xl max-sm:h-[50vh] border-4 border-b-0 border-purple-200">
         <Slider />
@@ -32,6 +35,10 @@ const Home = () => {
 
         <Recipes />
       </div>
+      <FAQ />
+      <FeedbackPage />
+      <About />
+
       <Testimonial />
     </div>
   );

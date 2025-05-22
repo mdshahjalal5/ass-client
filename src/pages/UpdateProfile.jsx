@@ -31,7 +31,7 @@ const UpdateProfile = () => {
   return (
     <div className="flex justify-center items-center min-h-[65vh] px-4">
       <Helmet>
-        <title>Update Profile || Subscription Box</title>
+        <title>Update Profile || FlavorBook</title>
       </Helmet>
       <div className="card w-full max-w-md bg-base-100 shadow-lg p-6">
         <h2 className="text-2xl font-semibold mb-4 text-center">

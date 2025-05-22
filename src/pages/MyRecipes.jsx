@@ -20,6 +20,9 @@ const MyRecipes = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>My Recipes || FlavorBook</title>
+      </Helmet>
       <div className="mt-7">
         {user?.displayName ? (
           <h1 className="font-bold text-sky-400 text-2xl">

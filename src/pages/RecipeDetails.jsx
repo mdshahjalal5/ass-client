@@ -42,7 +42,7 @@ const RecipeDetails = ({ currentUser }) => {
 
       <div className="max-w-4xl mx-auto p-6 border-[1px] rounded-xl shadow-2xl border-sky-400 mt-10">
         <Helmet>
-          <title> Recipe Details | Flavor Book</title>
+          <title> Recipe Details | FlavorBook</title>
         </Helmet>
         <h1 className="text-2xl font-bold mb-4 font-kaushan text-purple-500">
           {recipe.title}

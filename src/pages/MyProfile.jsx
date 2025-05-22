@@ -12,7 +12,7 @@ const MyProfile = () => {
   return (
     <div className="flex justify-center py-10 px-4 items-center min-h-[60vh]">
       <Helmet>
-        <title>My Profile || Subscription Box</title>
+        <title>My Profile || FlavorBook</title>
       </Helmet>
       <div className="card w-full max-w-md bg-base-100 shadow-xl">
         <figure className="px-10 pt-10">

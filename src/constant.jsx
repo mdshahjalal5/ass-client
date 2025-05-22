@@ -25,33 +25,37 @@ const links = [
   },
 ];
 
-const blogs = [
+export const feedbacks = [
   {
-    question: "What is a subscription-based model and how does it work?",
-    answer:
-      "A subscription-based model charges users a recurring fee—monthly, quarterly, or yearly—to access a product or service. It's commonly used in SaaS platforms, streaming services, and content delivery businesses to ensure consistent revenue and customer retention.",
-  },
-
-  {
-    question: "What are the key benefits of subscription services for users?",
-    answer:
-      "Users benefit from convenience, consistent access to updates or content, lower upfront costs, and enhanced support. Subscriptions also allow users to opt out anytime, giving them control without long-term commitment.",
+    name: "Shahjalal",
+    comment:
+      "Absolutely loving FlavorBook! 😍 The recipes are easy to follow and super tasty!",
+    emoji: "🍛",
+    rating: 5,
+    avatar: "https://i.pravatar.cc/100?img=4",
   },
   {
-    question: "How can you manage user subscriptions in a web app?",
-    answer:
-      "You can manage subscriptions using payment gateways like Stripe, PayPal, or Razorpay, which offer APIs for billing cycles, plan upgrades, and cancellation. On the frontend, React state and context can track user plans and access.",
+    name: "Arifa",
+    comment:
+      "The UI is so smooth and friendly! Love the dark mode feature. 🌙✨",
+    emoji: "🌮",
+    rating: 4,
+    avatar: "https://i.pravatar.cc/100?img=5",
   },
   {
-    question:
-      "What metrics are important to monitor in a subscription-based app?",
-    answer:
-      "Key metrics include Monthly Recurring Revenue (MRR), churn rate, customer lifetime value (CLTV), customer acquisition cost (CAC), and active subscriptions. Tracking these helps optimize pricing, retention, and growth strategies.",
+    name: "Tanvir",
+    comment:
+      "Found my new go-to app for quick dinner ideas. Thanks FlavorBook! 👨‍🍳🔥",
+    emoji: "🍝",
+    rating: 5,
+    avatar: "https://i.pravatar.cc/100?img=12",
   },
   {
-    question: "How do you implement protected routes in a subscription app?",
-    answer:
-      "Protected routes are implemented by checking the user's authentication and subscription status before allowing access. If a user is not subscribed or logged in, they're redirected to the login or subscription page. This ensures only paying users access premium features.",
+    name: "Sadia",
+    comment: "I like how I can add my own recipes and update them easily! 💡📖",
+    emoji: "🥗",
+    rating: 4,
+    avatar: "https://i.pravatar.cc/100?img=7",
   },
 ];
 
@@ -279,4 +283,4 @@ const boxes = [
     number_of_reviews: 146,
   },
 ];
-export { links, blogs, boxes };
+export { links, boxes };

@@ -63,7 +63,7 @@ const LoginPage = () => {
   return (
     <div className="min-h-[90vh] flex items-center justify-center bg-base-200">
       <Helmet>
-        <title>Forgot Password || Subscription Box</title>
+        <title>Forgot Password || FlavorBook</title>
       </Helmet>
       <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-lg">
         <h2 className="text-3xl font-bold text-center text-primary mb-6">

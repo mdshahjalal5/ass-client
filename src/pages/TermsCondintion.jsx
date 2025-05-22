@@ -4,87 +4,84 @@ import { Helmet } from "react-helmet-async";
 
 const TermsAndConditions = () => {
   return (
-    <div className="p-6 max-w-5xl mx-auto bg-white">
-      <Helmet>title="Terms & Conditions || Subscription Box"</Helmet>
-      <h1 className="text-4xl font-bold text-primary mb-6 text-center">
-        Terms & Conditions
-      </h1>
+    <div className="bg-gradient-to-tr from-orange-100 via-yellow-50 to-orange-200 min-h-screen py-12 px-6 md:px-20">
+      <div className="max-w-4xl mx-auto bg-white shadow-2xl rounded-3xl p-8 border border-orange-300">
+        <div className="text-center mb-10">
+          <h1 className="text-4xl font-bold text-orange-600 mb-2">
+            🍽️ Terms & Conditions
+          </h1>
+          <p className="text-gray-600 italic">
+            Last updated: <span className="font-semibold">May 22, 2025</span>
+          </p>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png"
+            alt="terms icon"
+            className="w-20 mx-auto mt-4 animate-bounce"
+          />
+        </div>
 
-      <section className="mb-8">
-        <p className="mb-4">
-          By subscribing to our technology boxes, you agree to the following
-          terms and conditions. These boxes are curated to enhance your
-          learning, hobby, or professional interest in the latest tech domains.
-          Subscriptions are billed according to the selected frequency and are
-          non-refundable once shipped.
-        </p>
-        <ul className="list-disc ml-6 space-y-2 text-sm text-gray-700">
-          <li>
-            All boxes are subject to availability and may be replaced with
-            equivalent alternatives.
-          </li>
-          <li>
-            Subscribers must ensure their shipping and billing information is
-            accurate.
-          </li>
-          <li>
-            Benefits like tutorials, early access, or downloads are for personal
-            use only and cannot be redistributed.
-          </li>
-          <li>
-            Subscription may be paused or canceled from your account dashboard
-            at least 7 days before the renewal date.
-          </li>
-        </ul>
-      </section>
-
-      <hr className="my-10" />
-
-      <h2 className="text-2xl font-semibold text-primary mb-4">
-        Box-Specific Terms
-      </h2>
-
-      {boxes.map((box) => (
-        <div key={box.id} className="mb-10 border rounded-lg p-4 shadow-sm">
-          <div className="flex items-center gap-4 mb-2">
-            <img
-              src={box.thumbnail}
-              alt={box.name}
-              className="w-16 h-16 rounded object-cover"
-            />
-            <div>
-              <h3 className="text-xl font-bold">{box.name}</h3>
-              <p className="text-sm text-gray-500">
-                {box.tech_category} • {box.frequency} • ${box.price}
-              </p>
-            </div>
+        <div className="space-y-6 text-gray-700">
+          <div className="group hover:bg-orange-50 hover:shadow-inner p-4 rounded-lg transition">
+            <h2 className="text-xl font-semibold text-orange-500">
+              🧑‍🍳 User Responsibilities
+            </h2>
+            <p className="mt-2">
+              You agree to use FlavorBook for lawful purposes only. Recipes you
+              add must be original or properly credited. Sharing harmful or
+              plagiarized content is prohibited.
+            </p>
           </div>
-          <p className="text-gray-700 mb-3">{box.description}</p>
 
-          <div className="grid md:grid-cols-2 gap-4 text-sm">
-            <div>
-              <h4 className="font-semibold text-gray-800 mb-1">
-                What's Included:
-              </h4>
-              <ul className="list-disc ml-5 text-gray-600">
-                {box.features.map((feature, index) => (
-                  <li key={index}>{feature}</li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold text-gray-800 mb-1">
-                Subscription Benefits:
-              </h4>
-              <ul className="list-disc ml-5 text-gray-600">
-                {box.subscription_benefits.map((benefit, index) => (
-                  <li key={index}>{benefit}</li>
-                ))}
-              </ul>
-            </div>
+          <div className="group hover:bg-yellow-50 hover:shadow-inner p-4 rounded-lg transition">
+            <h2 className="text-xl font-semibold text-orange-500">
+              🔐 Privacy & Security
+            </h2>
+            <p className="mt-2">
+              We respect your privacy. Your personal data like email or profile
+              photo will never be shared without your permission. All passwords
+              are encrypted. 🔒
+            </p>
+          </div>
+
+          <div className="group hover:bg-orange-100 hover:shadow-inner p-4 rounded-lg transition">
+            <h2 className="text-xl font-semibold text-orange-500">
+              🥗 Recipe Ownership
+            </h2>
+            <p className="mt-2">
+              All recipes posted by users remain their intellectual property.
+              However, by posting them, you allow FlavorBook to display and
+              feature your recipes across the platform.
+            </p>
+          </div>
+
+          <div className="group hover:bg-yellow-100 hover:shadow-inner p-4 rounded-lg transition">
+            <h2 className="text-xl font-semibold text-orange-500">
+              🚫 Misuse & Termination
+            </h2>
+            <p className="mt-2">
+              FlavorBook reserves the right to suspend or terminate accounts
+              that violate these terms, including hate speech, spam, or abusive
+              behavior.
+            </p>
+          </div>
+
+          <div className="group hover:bg-orange-50 hover:shadow-inner p-4 rounded-lg transition">
+            <h2 className="text-xl font-semibold text-orange-500">
+              ✨ Changes to These Terms
+            </h2>
+            <p className="mt-2">
+              We may update our Terms and Conditions periodically. Continued use
+              of FlavorBook means you accept the updated terms.
+            </p>
           </div>
         </div>
-      ))}
+
+        <div className="mt-10 text-center">
+          <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2 rounded-full transition duration-300 shadow-md hover:shadow-lg">
+            I Agree 🍊
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
