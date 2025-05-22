@@ -10,7 +10,6 @@ const Recipes = () => {
   const [recipes, setRecipes] = useState(initialRecipes);
 
   const location = useLocation();
-  console.log(location, "Recipes.jsx", 9);
   return (
     <div>
       {location.pathname === "/all-recipes" ? (

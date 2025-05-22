@@ -1,12 +1,15 @@
 import React, { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../provider/AuthProvider";
 import { EyeIcon, EyeOffIcon } from "lucide-react";
 
 const RegisterPage = () => {
   const { createUser, updateUser, googleLogin } = useContext(AuthContext);
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+  console.log(from, "Register.jsx", 12);
 
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);

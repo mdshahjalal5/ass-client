@@ -46,8 +46,6 @@ const AddRecipe = () => {
         .filter((item) => item !== ""),
     };
 
-    console.log("Recipe submitted:", newRecipe);
-
     const response = await fetch(`http://localhost:5000/api/v1/create-recipe`, {
       method: "POST",
       headers: {
@@ -57,7 +55,6 @@ const AddRecipe = () => {
     });
 
     const data = await response.json();
-    console.log(data, "AddRecipe.jsx", 212);
     if (data.data.insertedId) {
       Swal.fire({
         icon: "success",
