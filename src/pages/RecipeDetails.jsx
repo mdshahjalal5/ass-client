@@ -36,14 +36,14 @@ const RecipeDetails = ({ currentUser }) => {
   return (
     <>
       <h2 className="text-xl sm:text-2xl font-semibold mb-8 text-gray-500 mt-10 text-center">
-        <span className="text-sky-500">{likeCount + " " || "No" + " "}</span>
-        People interested in this recipe.
+        <span className="text-sky-500">{likeCount || "No"}</span>
+        &nbsp; Foodies love this recipe.
       </h2>
-      <div className="max-w-4xl mx-auto p-6 border-[1px] rounded-xl shadow-2xl border-sky-400 ">
+      <div className="max-w-4xl mx-auto p-6  rounded-xl shadow-2xl">
         <Helmet>
           <title> Recipe Details | FlavorBook</title>
         </Helmet>
-        <h1 className="text-2xl font-bold mb-4 font-kaushan text-purple-500">
+        <h1 className="capitalize text-2xl font-bold mb-4 font-kaushan text-purple-500">
           {recipe.title}
         </h1>
 

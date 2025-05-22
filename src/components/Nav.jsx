@@ -12,7 +12,7 @@ const Nav = () => {
   const { user, logout, loading } = useContext(AuthContext);
   return (
     <header className="p-4  max-container sticky z-10 top-2">
-      <nav className="flex-between  p-2 rounded-xl sticky z-[1000] bg-gradient-to-r from-orange-50 to-red-50  ">
+      <nav className="flex-between  p-2 rounded-xl sticky z-[1000] bg-gradient-to-r from-gray-50 to-gray-200">
         <Brand />
         {/* desktop device menu */}
         <Menu

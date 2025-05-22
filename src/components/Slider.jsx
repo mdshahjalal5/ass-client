@@ -5,10 +5,8 @@ import "swiper/css/pagination";
 
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Link } from "react-router";
-import { useMediaQuery } from "react-responsive";
 
 const Slider = () => {
-  const mobile = useMediaQuery({ maxWidth: 1220 });
   return (
     <Swiper
       modules={[Navigation, Pagination, Autoplay]}
@@ -17,7 +15,7 @@ const Slider = () => {
       pagination={{ clickable: true }}
       loop={true}
       autoplay={{
-        delay: 1000,
+        delay: 1500,
         disableOnInteraction: false,
       }}
     >

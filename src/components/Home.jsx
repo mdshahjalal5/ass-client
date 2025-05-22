@@ -1,7 +1,6 @@
 import Slider from "./Slider";
 import { Typewriter } from "react-simple-typewriter";
 import { Helmet } from "react-helmet-async";
-import Testimonial from "./Testimonial";
 import Recipes from "./Recipes";
 import About from "../pages/About";
 import FAQ from "../pages/Faq";
@@ -38,7 +37,6 @@ const Home = () => {
       <About />
       <FAQ />
       <FeedbackPage />
-
     </div>
   );
 };

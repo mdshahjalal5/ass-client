@@ -2,7 +2,7 @@ import { Link, useLoaderData, useLocation } from "react-router";
 
 import Recipe from "./Recipe";
 import Button from "./Button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Recipes = () => {
   const initialRecipes = useLoaderData().data;
@@ -10,13 +10,50 @@ const Recipes = () => {
   const [recipes, setRecipes] = useState(initialRecipes);
 
   const location = useLocation();
+  const [selectedCuisine, setSelectedCuisine] = useState("All");
+
+  // Extract unique cuisines
+  const cuisineOptions = [
+    "All",
+    ...new Set(initialRecipes.map((r) => r.cuisine).filter(Boolean)),
+  ];
+
+  useEffect(() => {
+    if (selectedCuisine === "All") {
+      setRecipes(initialRecipes);
+    } else {
+      const filtered = initialRecipes.filter(
+        (r) => r.cuisine === selectedCuisine,
+      );
+      setRecipes(filtered);
+    }
+  }, [selectedCuisine, initialRecipes]);
   return (
     <div>
       {location.pathname === "/all-recipes" ? (
-        <h1 className="text-gray-500 font-bold text-xl my-5">
-          Total Recipes:{" "}
-          {recipes.length > 9 ? recipes.length : "0" + recipes.length}
-        </h1>
+        <>
+          <h1 className="text-gray-500 font-bold text-xl my-5">
+            Total Recipes:{" "}
+            {recipes.length > 9 ? recipes.length : "0" + recipes.length}
+          </h1>
+          {/* Filter Dropdown */}
+          <div className="mb-4">
+            <label className="font-medium text-gray-600 mr-2">
+              Filter by Cuisine:
+            </label>
+            <select
+              className="border border-gray-300 rounded px-3 py-1 bg-white text-gray-800 shadow"
+              value={selectedCuisine}
+              onChange={(e) => setSelectedCuisine(e.target.value)}
+            >
+              {cuisineOptions.map((cuisine, index) => (
+                <option key={index} value={cuisine}>
+                  {cuisine}
+                </option>
+              ))}
+            </select>
+          </div>
+        </>
       ) : null}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {recipes.map((r) => (
