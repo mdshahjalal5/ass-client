@@ -66,7 +66,7 @@ const RecipeDetails = ({ currentUser }) => {
           />
         </div>
 
-        <p className="text-lg mb-2 text-gray-700">
+        <p className="text-lg mb-2 text-sky-500">
           <strong>Cuisine Type:</strong> {recipe.cuisine}
         </p>
 
@@ -80,7 +80,7 @@ const RecipeDetails = ({ currentUser }) => {
 
         <div className="mb-4">
           <strong>Ingredients:</strong>
-          <ul className="bg-gray-100 p-2 rounded mt-1 space-y-1">
+          <ul className="bg-gray-100 p-2 rounded mt-1 space-y-1 dark:text-sky-400">
             {recipe.ingredients.map((ingredient, index) => (
               <li key={index}>
                 <span className="font-medium text-sky-700">{index + 1}.</span>{" "}
@@ -92,7 +92,9 @@ const RecipeDetails = ({ currentUser }) => {
 
         <div className="mb-4">
           <strong>Instructions:</strong>
-          <p className="bg-gray-100 p-2 rounded mt-1">{recipe.instructions}</p>
+          <p className="bg-gray-100 dark:text-sky-400 p-2 rounded mt-1">
+            {recipe.instructions}
+          </p>
         </div>
 
         <div className="flex items-center justify-between mt-6">

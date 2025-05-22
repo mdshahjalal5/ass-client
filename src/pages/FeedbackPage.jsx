@@ -53,7 +53,7 @@ const FeedbackPage = () => {
             11.54L12 21.35z"
           />
         </svg>
-        <p className="mt-4 text-lg text-gray-600">
+        <p className="mt-4 text-lg text-gray-400">
           We love hearing from you! 🧡
         </p>
       </div>

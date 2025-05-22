@@ -11,9 +11,13 @@ const Recipe = ({ recipe, setRecipes = () => {}, recipes = [] }) => {
   const [isImageValid, setIsImageValid] = useState(true);
 
   const hanldeDelete = async (id) => {
-    const res = await fetch(`http://localhost:5000/api/v1/recipe/${id}`, {
-      method: "DELETE",
-    });
+    // const res = await fetch(`http://localhost:5000/api/v1/recipe/${id}`, {
+    const res = await fetch(
+      `https://recipesharingserverpr.vercel.app/api/v1/recipe/${id}`,
+      {
+        method: "DELETE",
+      },
+    );
     if (!res.ok) {
       throw new Error(
         `Failed to delete recipe, status:${res.status}, ${res.statusText}`,
@@ -36,7 +40,7 @@ const Recipe = ({ recipe, setRecipes = () => {}, recipes = [] }) => {
     }
   };
   return (
-    <div className="border rounded-lg shadow hover:shadow-md transition duration-300 max-w-[350px] shadow-xl border-sky-500 bg-gradient-to-b from-gray-300 to-gray-100 max-sm:min-w-[270px]">
+    <div className="rounded-lg shadow hover:shadow-md transition duration-300 max-w-[350px] shadow-xl bg-gradient-to-b from-gray-300 to-gray-100 max-sm:min-w-[280px]">
       <img
         src={image || "https://via.placeholder.com/400x250?text=No+Image"}
         // alt={title}
@@ -45,7 +49,7 @@ const Recipe = ({ recipe, setRecipes = () => {}, recipes = [] }) => {
       />
 
       <div className="p-4 space-y-2">
-        <h3 className="text-lg font-semibold">{title}</h3>
+        <h3 className="text-lg font-semibold dark:text-sky-400">{title}</h3>
         <p className="text-sm text-gray-600">Cuisine: {cuisine}</p>
         <p className="text-sm text-gray-600">Likes: {likeCount}</p>
         {pathname == "/my-recipes" && (
@@ -64,7 +68,7 @@ const Recipe = ({ recipe, setRecipes = () => {}, recipes = [] }) => {
           </div>
         )}
         <button
-          className=" w-full btn btn-outline btn-primary 500   rounded hover:bg-purple-700 text-sm rounded-full"
+          className="w-full btn btn-outline btn-primary 500   rounded hover:bg-purple-700 text-sm rounded-full"
           onClick={() => navigate(`/recipes/${recipe._id}`)}
         >
           View Details

@@ -11,7 +11,7 @@ const Home = () => {
       <Helmet>
         <title>Home || FlavorBook</title>
       </Helmet>
-      <div className="mb-20  bg-gray-100 shadow-2xl -1 rounded-xl max-sm:h-[50vh] border-4 border-b-0 border-purple-200">
+      <div className="mb-20  bg-gray-100 shadow-2xl -1 rounded-xl max-sm:h-[50vh] border-1 border-b-0 border-purple-200">
         <Slider />
       </div>
 

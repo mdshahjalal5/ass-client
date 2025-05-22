@@ -17,6 +17,7 @@ import MyRecipes from "../pages/MyRecipes";
 import UpdateRecipe from "../pages/UpdateRecipe";
 import FAQ from "../pages/Faq";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
+import Contact from "../pages/Contact";
 
 export const router = createBrowserRouter([
   {
@@ -26,7 +27,11 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        loader: () => fetch("http://localhost:5000/api/v1/recipes?limit=6"),
+        // loader: () => fetch("http://localhost:5000/api/v1/recipes?limit=6"),
+        loader: () =>
+          fetch(
+            "https://recipesharingserverpr.vercel.app/api/v1/recipes?limit=6",
+          ),
         element: <App />,
       },
       {
@@ -39,7 +44,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/all-recipes",
-        loader: () => fetch("http://localhost:5000/api/v1/recipes?limit=0"),
+        // loader: () => fetch("http://localhost:5000/api/v1/recipes?limit=0"),
+        loader: () =>
+          fetch(
+            "https://recipesharingserverpr.vercel.app/api/v1/recipes?limit=0",
+          ),
         element: <Recipes />,
       },
 
@@ -62,7 +71,9 @@ export const router = createBrowserRouter([
       {
         path: "/recipes/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/api/v1/recipe/${params.id}`),
+          fetch(
+            `https://recipesharingserverpr.vercel.app/api/v1/recipe/${params.id}`,
+          ),
         element: (
           <PrivateRoute>
             <RecipeDetails />
@@ -96,6 +107,10 @@ export const router = createBrowserRouter([
       {
         path: "privacy-policy",
         element: <PrivacyPolicy />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
       },
     ],
   },

@@ -46,13 +46,16 @@ const AddRecipe = () => {
         .filter((item) => item !== ""),
     };
 
-    const response = await fetch(`http://localhost:5000/api/v1/create-recipe`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
+    const response = await fetch(
+      `https://recipesharingserverpr.vercel.app/api/v1/create-recipe`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newRecipe),
       },
-      body: JSON.stringify(newRecipe),
-    });
+    );
 
     const data = await response.json();
     if (data.data.insertedId) {
@@ -80,7 +83,7 @@ const AddRecipe = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6">
+    <div className="max-w-2xl mx-auto p-6 text-white dark:text-sky-700 ">
       <Helmet>
         <title>Add Recipe || FlavorBook</title>
       </Helmet>
@@ -177,7 +180,7 @@ const AddRecipe = () => {
 
         <button
           type="submit"
-          className="bg-blue-600 text-white py-2 px-4 rounded w-full hover:bg-blue-700"
+          className="bg-blue-600 text-white  py-2 px-4 rounded w-full hover:bg-blue-700"
         >
           Add Recipe
         </button>

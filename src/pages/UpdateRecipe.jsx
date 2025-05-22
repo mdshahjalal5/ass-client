@@ -17,7 +17,7 @@ const UpdateRecipe = () => {
   const navigate = useNavigate();
 
   const { data, loading } = useFetch(
-    `http://localhost:5000/api/v1/recipe/${id}`,
+    `https://recipesharingserverpr.vercel.app/api/v1/recipe/${id}`,
   );
   const recipe = data?.data;
 
@@ -73,13 +73,16 @@ const UpdateRecipe = () => {
         .filter((item) => item !== ""),
     };
 
-    const res = await fetch(`http://localhost:5000/api/v1/recipe/${id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
+    const res = await fetch(
+      `https://recipesharingserverpr.vercel.app/api/v1/recipe/${id}`,
+      {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedRecipe),
       },
-      body: JSON.stringify(updatedRecipe),
-    });
+    );
 
     const result = await res.json();
 
