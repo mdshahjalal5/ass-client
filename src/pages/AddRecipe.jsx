@@ -67,8 +67,7 @@ const AddRecipe = () => {
         naviaget("/my-recipes");
       }, 2500);
     }
-    // Optionally reset form
-    /*  setFormData({
+    setFormData({
       image: "",
       title: "",
       ingredients: "",
@@ -76,14 +75,14 @@ const AddRecipe = () => {
       cuisine: "",
       prepTime: "",
       categories: [],
-      userEmail: user?.email,
-    }); */
+      // userEmail: user?.email,
+    });
   };
 
   return (
     <div className="max-w-2xl mx-auto p-6">
       <Helmet>
-        <title>Add Recipe</title>
+        <title>Add Recipe || FlavorBook</title>
       </Helmet>
       <h2 className="text-2xl font-bold text-center mb-6">Add a Recipe</h2>
       <form
