@@ -1,6 +1,6 @@
 const PrivacyPolicy = () => {
   return (
-    <div className="bg-gradient-to-br from-orange-50 via-white to-yellow-50 min-h-screen px-6 py-10 md:px-20 lg:px-36 text-gray-500 font-sans">
+    <div className=" min-h-screen px-6 py-10 md:px-20 lg:px-36 text-gray-500 font-sans">
       <div className="bg-white shadow-xl rounded-xl p-8 md:p-12 border-l-4 border-orange-400 hover:shadow-2xl transition-all duration-300">
         <h1 className="text-3xl md:text-4xl font-bold text-orange-600 mb-6">
           🍪 Privacy Policy

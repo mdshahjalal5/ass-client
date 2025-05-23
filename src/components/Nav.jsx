@@ -1,20 +1,11 @@
-import { logo } from "../assets";
 import Button from "./Button";
-import {
-  AlignJustify,
-  Cross,
-  EyeClosed,
-  Moon,
-  ShieldClose,
-  Sun,
-} from "lucide-react";
+import { AlignJustify, EyeClosed, Moon, ShieldClose, Sun } from "lucide-react";
 import { useContext, useState } from "react";
 import Menu from "./Menu";
 import Brand from "./Brand";
 import { Link } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 import { themeSwither } from "../hooks/ThemeSwitcher";
-import { FaCut } from "react-icons/fa";
 
 const Nav = () => {
   const [open, setOpen] = useState(false);

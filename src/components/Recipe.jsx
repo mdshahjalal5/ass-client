@@ -40,12 +40,12 @@ const Recipe = ({ recipe, setRecipes = () => {}, recipes = [] }) => {
     }
   };
   return (
-    <div className="rounded-lg shadow hover:shadow-md transition duration-300 max-w-[350px] shadow-xl bg-gradient-to-b from-gray-300 to-gray-100 max-sm:min-w-[280px]">
+    <div className="rounded-lg shadow hover:shadow-md transition duration-300 max-w-[350px] shadow-xl bg-gradient-to-b from-gray-300 to-gray-100 max-sm:min-w-[300px]">
       <img
         src={image || "https://via.placeholder.com/400x250?text=No+Image"}
         // alt={title}
         onError={() => setIsImageValid(false)}
-        className="w-[200px] object-cover rounded-xl shadow-xl mx-auto mt-2"
+        className="w-[200px] object-cover rounded-xl shadow-xl mx-auto mt-2 max-h-[200px]"
       />
 
       <div className="p-4 space-y-2">

@@ -79,11 +79,6 @@ const Recipes = () => {
           </Link>
         </div>
       )}
-      <input
-        type="checkbox"
-        value="synthwave"
-        className="toggle theme-controller"
-      />
     </div>
   );
 };

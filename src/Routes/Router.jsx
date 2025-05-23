@@ -18,6 +18,7 @@ import UpdateRecipe from "../pages/UpdateRecipe";
 import FAQ from "../pages/Faq";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
 import Contact from "../pages/Contact";
+import About from "../pages/About";
 
 export const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ export const router = createBrowserRouter([
             <AddRecipe />
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/about",
+        element: <About />,
       },
       {
         path: "/all-recipes",
