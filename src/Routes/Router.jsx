@@ -19,7 +19,8 @@ import FAQ from "../pages/Faq";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
 import Contact from "../pages/Contact";
 import About from "../pages/About";
-
+import Blogs from "../modules/blogs/Blogs";
+import BlogDetails from "../modules/blogs/BlogDetails";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -46,6 +47,14 @@ export const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "blogs",
+        Component: Blogs,
+      },
+      {
+        path: "/blog/:id",
+        Component: BlogDetails,
       },
       {
         path: "/all-recipes",

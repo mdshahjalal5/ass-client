@@ -48,6 +48,11 @@ const Footerr = () => {
               </Link>
             </li>
             <li>
+              <Link to="/blogs" className="hover:text-orange-600">
+                Blogs
+              </Link>
+            </li>
+            <li>
               <Link to="/faq" className="hover:text-orange-600">
                 FAQ
               </Link>
@@ -72,6 +77,11 @@ const Footerr = () => {
             <li>
               <Link to="/contact" className="hover:text-orange-600">
                 Contact Us
+              </Link>
+            </li>
+            <li>
+              <Link to="/blogs" className="hover:text-orange-600">
+                Blogs
               </Link>
             </li>
           </ul>
