@@ -4,6 +4,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../provider/AuthProvider";
 import { EyeIcon, EyeOffIcon } from "lucide-react";
+import LottieAnimation from "../animation/Walking";
+import { loginAnimation2 } from "../animation";
 
 const RegisterPage = () => {
   const { createUser, updateUser, googleLogin } = useContext(AuthContext);
@@ -79,11 +81,14 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-evenly bg-gray-10 max-lg:flex-col-reverse max-lg:my-10">
+      <div>
+        <LottieAnimation animation={loginAnimation2} />
+      </div>
       <Helmet>
         <title>Register || FlavorBook</title>
       </Helmet>
-      <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-lg">
+      <div className="w-full max-w-md p-8 bg-white rounded-lg shadow">
         <h2 className="text-3xl font-bold text-center text-primary mb-6">
           Create Account
         </h2>
@@ -189,7 +194,7 @@ const RegisterPage = () => {
         <div className="mt-4 text-center">
           <p className="text-sm">
             Already have an account?
-            <Link to="/auth/login" className="text-primary">
+            <Link to="/auth/login" className="text-primary ml-3">
               Log In
             </Link>
           </p>

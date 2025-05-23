@@ -1,5 +1,5 @@
 import Button from "./Button";
-import { AlignJustify, EyeClosed, Moon, ShieldClose, Sun } from "lucide-react";
+import { AlignJustify, Moon, Sun } from "lucide-react";
 import { useContext, useState } from "react";
 import Menu from "./Menu";
 import Brand from "./Brand";
@@ -14,13 +14,15 @@ const Nav = () => {
   const { user, logout, loading } = useContext(AuthContext);
   return (
     <header className="p-4  max-container sticky z-10 top-2">
-      <nav className="flex-between  p-2 rounded-xl sticky z-[1000] bg-gradient-to-r from-gray-50 to-gray-200">
+      <nav className="flex items-center justify-between  p-2 rounded-xl sticky z-[1000] bg-gradient-to-r from-gray-50 to-gray-200">
         <Brand />
-        {/* desktop device menu */}
-        <Menu
-          className={`max-lg:hidden flex gap-5 text-gray-600 font-semibold text-lg`}
-        />
 
+        {/* desktop device menu */}
+        <div>
+          <Menu
+            className={`max-lg:hidden flex gap-5 text-gray-600 font-semibold text-lg`}
+          />
+        </div>
         <div className="flex items-center gap-1 flex-row-reverse">
           <div className="relative">
             <div className="max-lg:hidden">
@@ -56,7 +58,9 @@ const Nav = () => {
                 {open ? (
                   <span className="text-2xl font-semibold p-1 ">X</span>
                 ) : (
-                  <AlignJustify />
+                  <span>
+                    <AlignJustify />
+                  </span>
                 )}
               </button>
             </div>

@@ -8,7 +8,7 @@ const Brand = ({ className }) => {
     <>
       <div className={`flex items-center gap-2 ${className || ""}`}>
         {/* <img src={logo} width={25} className="rounded-full" /> */}
-        <div className="w-10">
+        <div className="w-10 max-sm:w-8">
           <LottieAnimation animation={cookingAnimation} />
         </div>
         <h1 className=" max-sm:text-xl text-3xl font-semibold">
