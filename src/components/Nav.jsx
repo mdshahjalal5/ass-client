@@ -100,5 +100,6 @@ const Nav = () => {
     </header>
   );
 };
+<AlignJustify />
 
 export default Nav;
