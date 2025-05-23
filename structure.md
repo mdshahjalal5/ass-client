@@ -60,8 +60,6 @@
 │   │   ├── Recipe.jsx
 │   │   ├── Recipes.jsx
 │   │   └── Slider.jsx
-│   ├── constant
-│   │   └── blog.constant.js
 │   ├── constant.jsx
 │   ├── firebase
 │   │   └── firebase.config.js
@@ -73,13 +71,18 @@
 │   │   ├── AuthLayout.jsx
 │   │   └── Layout.jsx
 │   ├── main.jsx
+│   ├── modules
+│   │   ├── blogs
+│   │   │   ├── blog.constant.js
+│   │   │   ├── BlogDetails.jsx
+│   │   │   ├── Blog.jsx
+│   │   │   └── Blogs.jsx
+│   │   └── chef
+│   │       └── Chefs.jsx
 │   ├── package.json
 │   ├── pages
 │   │   ├── About.jsx
 │   │   ├── AddRecipe.jsx
-│   │   ├── BlogDetails.jsx
-│   │   ├── Blog.jsx
-│   │   ├── Blogs.jsx
 │   │   ├── Contact.jsx
 │   │   ├── Faq.jsx
 │   │   ├── FeedbackPage.jsx
@@ -104,4 +107,4 @@
 ├── structure.md
 └── vite.config.js
 
-16 directories, 89 files
+18 directories, 90 files

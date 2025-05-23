@@ -1,20 +1,19 @@
 import { Link } from "react-router-dom";
 import { Typewriter } from "react-simple-typewriter";
 import LottieAnimation from "../animation/Walking";
-import { cookingAnimation, male_cooking } from "../animation";
+import { cookingAnimation } from "../animation";
 
 const Brand = ({ className }) => {
   return (
     <>
-      <div className={`flex items-center gap-2 ${className || ""}`}>
+      <div className={`w-[220px] flex items-center gap-2 ${className || ""}`}>
         {/* <img src={logo} width={25} className="rounded-full" /> */}
         <div className="w-10 max-sm:w-8">
           <LottieAnimation animation={cookingAnimation} />
         </div>
-        <h1 className=" max-sm:text-xl text-3xl font-semibold">
+        <h1 className="max-sm:text-xl text-3xl font-semibold">
           <Link to="/">
             <span className="font-courgette text-purple-700">
-              {" "}
               <Typewriter
                 words={["Flavor"]}
                 loop={0}

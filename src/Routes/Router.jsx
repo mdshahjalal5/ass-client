@@ -21,6 +21,8 @@ import Contact from "../pages/Contact";
 import About from "../pages/About";
 import Blogs from "../modules/blogs/Blogs";
 import BlogDetails from "../modules/blogs/BlogDetails";
+import BlogsLayout from "../Layout/BlogsLayout";
+import CreateBlog from "../modules/blogs/CreateBlog";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -52,10 +54,10 @@ export const router = createBrowserRouter([
         path: "blogs",
         Component: Blogs,
       },
-      {
+      /*  {
         path: "/blog/:id",
         Component: BlogDetails,
-      },
+      }, */
       {
         path: "/all-recipes",
         // loader: () => fetch("http://localhost:5000/api/v1/recipes?limit=0"),
@@ -147,7 +149,22 @@ export const router = createBrowserRouter([
     ],
   },
   {
-    path: "/register",
-    Component: RegisterPage,
+    path: "/blogs",
+    Component: BlogsLayout,
+    errorElement: <h2>error</h2>,
+    children: [
+      {
+        index: true,
+        element: <Blogs />,
+      },
+      {
+        path: ":id",
+        element: <BlogDetails />,
+      },
+      {
+        path: "create",
+        element: <CreateBlog />,
+      },
+    ],
   },
 ]);

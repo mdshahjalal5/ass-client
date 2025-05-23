@@ -1,4 +1,5 @@
 import { useParams } from "react-router";
+import { Helmet } from "react-helmet-async";
 import { blogs } from "./blog.constant";
 
 const BlogDetails = () => {
@@ -9,6 +10,9 @@ const BlogDetails = () => {
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
+      <Helmet>
+        <title>Blog Details || FlavorBook</title>
+      </Helmet>
       <h1 className="text-3xl font-bold text-orange-600 mb-4">{blog.title}</h1>
 
       <div className="flex items-center gap-4 mb-6">

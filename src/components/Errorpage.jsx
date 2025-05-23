@@ -8,7 +8,7 @@ const Errorpage = () => {
   return (
     <>
       <div className="flex-center min-h-[90vh] flex-col  ">
-        <div className="flex-center  flex-col  p-2 sm:p-20 rounded-2xl drop-shadow-2xl space-y-9 bg-gray-200">
+        <div className="flex-center  flex-col  p-6 sm:p-20 rounded-2xl drop-shadow-2xl space-y-9 bg-gray-200">
           <h1 className="text-red-500 text-2xl">
             {error?.statusText || error?.message}
           </h1>
@@ -17,7 +17,7 @@ const Errorpage = () => {
             src={
               "https://images.deepai.org/art-image/b6e5bbc549784002bd10642c72b68412/a-creative-and-humorous-404-not-found-illustration-wi.jpg"
             }
-            className="max-w-[400px] rounded-2xl drop-shadow-2xl"
+            className="max-w-[400px] max-sm:max-w-[280px] rounded-2xl drop-shadow-2xl"
           />
           <div className="flex gap-6  w-full">
             <div onClick={() => navigate("/")} className="flex-1 ">

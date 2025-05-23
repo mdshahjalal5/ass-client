@@ -15,6 +15,7 @@ const links = [
     label: "My Recipes",
     path: "/my-recipes",
   },
+
   {
     label: "Profile",
     path: "/my-profile",

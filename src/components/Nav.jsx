@@ -3,19 +3,32 @@ import { AlignJustify, Moon, Sun } from "lucide-react";
 import { useContext, useState } from "react";
 import Menu from "./Menu";
 import Brand from "./Brand";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
+import { useMediaQuery } from "react-responsive";
 import { themeSwither } from "../hooks/ThemeSwitcher";
 
 const Nav = () => {
+  const isMobile = useMediaQuery({
+    maxWidth: 639,
+  });
   const [open, setOpen] = useState(false);
 
   const [themeLight, setThemeLight] = useState(true);
   const { user, logout, loading } = useContext(AuthContext);
+
+  const { pathname } = useLocation();
+  const isBlogsRoute = pathname.startsWith("/blogs");
+  const isChefsRoute = pathname.startsWith("/chefs");
+
+  // const isMobile= ;
+  console.log(pathname, "Nav.jsx", 17);
   return (
     <header className="p-4  max-container sticky z-10 top-2">
       <nav className="flex items-center justify-between  p-2 rounded-xl sticky z-[1000] bg-gradient-to-r from-gray-50 to-gray-200">
-        <Brand />
+        <div>
+          <Brand />
+        </div>
 
         {/* desktop device menu */}
         <div>
@@ -52,7 +65,9 @@ const Nav = () => {
             </div>
             <div
               onClick={() => setOpen(!open)}
-              className="lg:hidden text-gray-700 "
+              className={`lg:hidden text-gray-700  ${
+                isMobile && isBlogsRoute && isChefsRoute ? "" : "hidden"
+              }`}
             >
               <button>
                 {open ? (
@@ -100,6 +115,6 @@ const Nav = () => {
     </header>
   );
 };
-<AlignJustify />
+<AlignJustify />;
 
 export default Nav;
