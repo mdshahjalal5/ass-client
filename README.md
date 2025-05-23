@@ -20,8 +20,6 @@
 
 # 🎁 FlavorBook recipe sharing Platform
 
-A fully responsive single-page application for managing personalized monthly subscription boxes. Built as part of **Assignment-09_category_Lily**, this app includes protected routes, Firebase authentication, and user interaction features like reviews and profile updates.
-
 ## 🔗 Live Link
 
 [🔗 View Live Site](https://flavorbook.surge.sh/)
@@ -37,15 +35,14 @@ A fully responsive single-page application for managing personalized monthly sub
 ### ✅ Core Features
 
 - 🧾 **User Authentication** with Email/Password and Google Login (Firebase Auth)
-- 🔐 **Protected Routes**: Subscription details and My Profile require authentication
-- 📦 **Subscription Box Cards** with JSON-based service data
-- 📝 **User Reviews**: Leave rating and feedback on subscription services
+- 🔐 **Protected Routes**: recipe details and My Profile require authentication
+- 📦 **recipe Cards** with JSON-based recipe data
 - 📄 **My Profile Page** with update feature (display name + photoURL)
 - 📧 **Forget Password**: Fully functional with email reset via Firebase
 - ⚙️ **Dynamic Page Titles** using `react-helmet-async`
 - 🧭 **404 Page** for invalid routes
 - 👁️ **Show/Hide Password Toggle** on Register page
-- 🌐 **Deployed via Netlify** with Firebase Auth domain configuration
+- 🌐 **Deployed via surge** with Firebase Auth domain configuration
 
 ---
 
@@ -65,6 +62,7 @@ A fully responsive single-page application for managing personalized monthly sub
 | Firebase               | Authentication and profile updates |
 | React Helmet Async     | Dynamic page titles                |
 | Swiper                 | Slider in Home                     |
+| react-lottie           | for lottie animations              |
 
 ---
 
@@ -75,7 +73,7 @@ A fully responsive single-page application for managing personalized monthly sub
 - `/register` Registration Page (with password validation)
 - `/profile` My Profile (Protected)
 - `/update-profile` Update Profile Info (Protected)
-- `/service/:id` Subscription Details (Protected, with review system)
+- `/recipe/:id` recipe Details (Protected, with review system)
 - `/auth/forgot-password` Forgot Password
 - `/extra` Extra Protected Route (Bonus content)
 - `*` 404 Page
@@ -93,4 +91,3 @@ npm install
 
 code link: https://github.com/mdshahjalal5/ass
 live site: https://subscriptionbox.surge.sh/
-

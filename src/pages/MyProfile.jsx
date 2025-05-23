@@ -19,7 +19,7 @@ const MyProfile = () => {
           Welcome, {user.displayName || "Flavor Enthusiast"}!{" "}
           <span className="text-white">🍽️</span>
         </h2>
-        <p className="mt-3 text-lg text-gray-700 max-sm:text-xs">
+        <p className="mt-3 text-lg text-gray-400 max-sm:text-xs">
           Your culinary journey begins here. Explore, create, and share your
           passion for flavor.
         </p>
@@ -66,7 +66,7 @@ const MyProfile = () => {
       </div>
       {/* ✨ Meaningful Message */}
       <div className="text-center">
-        <p className="text-lg font-medium text-gray-700">
+        <p className="text-lg font-medium text-gray-400">
           ✨ Every recipe you create tells a story. Keep cooking, keep sharing,
           and let the world taste your creativity!
         </p>
