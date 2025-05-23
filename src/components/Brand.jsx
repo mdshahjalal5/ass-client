@@ -13,7 +13,7 @@ const Brand = ({ className }) => {
         </div>
         <h1 className=" max-sm:text-xl text-3xl font-semibold">
           <Link to="/">
-            <span className="font-courgette text-purple-400">
+            <span className="font-courgette text-purple-700">
               {" "}
               <Typewriter
                 words={["Flavor"]}
@@ -25,7 +25,7 @@ const Brand = ({ className }) => {
                 delaySpeed={1800}
               />
             </span>
-            <span className="font-kaushan text-sky-400">Book</span>
+            <span className="font-kaushan text-sky-700">Book</span>
           </Link>
         </h1>
       </div>
