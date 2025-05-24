@@ -78,7 +78,7 @@ const Menu = ({ className, isExternal }) => {
             <NavLink to="/recipe-market">Recipe Store</NavLink>
           </li>
           <li>
-            <NavLink to="/blogs/create">Sell ingredients</NavLink>
+            <NavLink to="/recipe-market/create">Start Selling</NavLink>
           </li>
         </ul>
       </div>

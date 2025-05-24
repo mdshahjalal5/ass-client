@@ -20,11 +20,11 @@ const IngredientDetails = () => {
 
   const handleAddToCart = () => {
     toast.success(`${ingredient.name} added to cart 🛒`, { duration: 2000 });
-    // Optionally: Add to cart logic here
+    // Add to cart logic is coming here
   };
 
   return (
-    <div className="max-w-5xl mx-auto px-6 py-10">
+    <div className="max-w-5xl mx-auto px-6 py-10 mt-3">
       <button
         onClick={() => navigate(-1)}
         className="flex items-center text-blue-600 hover:underline mb-6"

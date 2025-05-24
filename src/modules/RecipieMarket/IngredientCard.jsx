@@ -2,19 +2,17 @@ import { Link } from "react-router-dom";
 
 const IngredientCard = ({ ingredient }) => {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 hover:scale-105 transition-transform">
+    <div className="bg-gray-100 ark:bg-gray-800 rounded-lg shadow-md p-4 hover:shadow-2xl transition-transform ">
       <img
         src={ingredient.image}
         alt={ingredient.name}
         className="w-full h-40 object-cover rounded-md mb-4"
       />
-      <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
+      <h3 className="text-lg font-semibold text-gray-400 ">
         {ingredient.name}
       </h3>
-      <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
-        {ingredient.description}
-      </p>
-      <div className="flex justify-between text-sm text-gray-700 dark:text-gray-300">
+      <p className="text-sm text-gray-500  mb-2">{ingredient.description}</p>
+      <div className="flex justify-between text-sm text-gray-600">
         <span>💰 ${ingredient.price}</span>
         <span>📦 {ingredient.quantity}</span>
       </div>

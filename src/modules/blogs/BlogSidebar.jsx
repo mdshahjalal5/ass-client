@@ -60,7 +60,7 @@ const BlogSidebar = () => {
               <NavLink to="/blogs">Blogs</NavLink>
             </li>
             <li>
-              <NavLink to="/blogs/create">Create Blog</NavLink>
+              <NavLink to="/blogs/create">Write a Blog</NavLink>
             </li>
           </ul>
         </div>
@@ -76,7 +76,7 @@ const BlogSidebar = () => {
               <NavLink to="/recipe-market">Recipe Store</NavLink>
             </li>
             <li>
-              <NavLink to="/blogs/create">Sell ingredients</NavLink>
+              <NavLink to="/recipe-market/create">Start Selling</NavLink>
             </li>
           </ul>
         </div>
