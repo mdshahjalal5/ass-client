@@ -21,6 +21,7 @@ const Nav = () => {
   const isBlogsRoute = pathname.startsWith("/blogs");
   const isChefsRoute = pathname.startsWith("/chefs");
   console.log(isChefsRoute, isBlogsRoute, isMobile, "Nav.jsx", 23);
+  const shouldShowHamburger = isMobile || (!isBlogsRoute && !isChefsRoute);
 
   // const isMobile= ;
   console.log(pathname, "Nav.jsx", 17);
@@ -64,12 +65,10 @@ const Nav = () => {
                 </Link>
               )}
             </div>
-            <div
+            {/* <div
               onClick={() => setOpen(!open)}
               className={`lg:hidden text-gray-700  ${
-                isMobile && (isBlogsRoute || isChefsRoute || "/")
-                  ? ""
-                  : "hidden"
+                isMobile && (isBlogsRoute || isChefsRoute) ? "" : "hidden"
               }`}
             >
               <button>
@@ -81,7 +80,22 @@ const Nav = () => {
                   </span>
                 )}
               </button>
-            </div>
+            </div> */}
+            {shouldShowHamburger && (
+              <div
+                onClick={() => setOpen(!open)}
+                className="text-gray-700 lg:hidden"
+              >
+                <button>
+                  {open ? (
+                    <span className="text-2xl font-semibold p-1">X</span>
+                  ) : (
+                    <AlignJustify />
+                  )}
+                </button>
+              </div>
+            )}
+
             <div
               className={`bg-gray-300  rounded-lg absolute -left-[124px] lg:hidden p-2 ${open ? "" : "hidden"}`}
             >

@@ -26,6 +26,8 @@ const RecipeDetails = ({ currentUser }) => {
     }
 
     // Ideally you'd POST or PATCH to server here
+    if (!likeCount) setLikeCount(0);
+
     setLikeCount((prev) => prev + 1);
   };
 
@@ -99,7 +101,7 @@ const RecipeDetails = ({ currentUser }) => {
 
         <div className="flex items-center justify-between mt-6">
           <p className="text-lg text-gray-800">
-            {likeCount} people interested in this recipe
+            {likeCount || 0} people interested in this recipe
           </p>
 
           <button

@@ -62,8 +62,9 @@ const Recipe = ({ recipe, setRecipes = () => {}, recipes = [] }) => {
                   document.getElementById("my_modal_1").showModal()
                 }
               >
-                {/* <Link to={`/update/${recipe._id}`}></Link> */}
-                <Button label={"Update "} className={"w-full"} />
+                <Link to={`/update/${recipe._id}`}>
+                  <Button label={"Update "} className={"w-full"} />
+                </Link>
               </div>
               <div
                 onClick={() => hanldeDelete(recipe?._id)}
@@ -81,14 +82,6 @@ const Recipe = ({ recipe, setRecipes = () => {}, recipes = [] }) => {
           </button>
         </div>
       </div>
-      <dialog id="my_modal_1" className="modal">
-        <div className="modal-box max-h-[90vh]">
-          <form>
-            <button>X</button>
-          </form>
-          <UpdateRecipe />
-        </div>
-      </dialog>
     </>
   );
 };

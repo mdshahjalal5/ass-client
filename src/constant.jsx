@@ -3,7 +3,7 @@ const links = [
     label: "Home",
     path: "/",
   },
-  {
+  /* {
     label: "Add Recipe",
     path: "/add-recipe",
   },
@@ -14,12 +14,7 @@ const links = [
   {
     label: "My Recipes",
     path: "/my-recipes",
-  },
-
-  {
-    label: "Chefs",
-    path: "/chefs",
-  },
+  }, */
 ];
 
 export const feedbacks = [

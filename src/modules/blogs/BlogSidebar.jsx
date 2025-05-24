@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const BlogSidebar = () => {
   const navItems = [
@@ -10,12 +10,10 @@ const BlogSidebar = () => {
   ];
 
   return (
-    <aside className="w-64 min-h-[80vh] bg-white dark:bg-gray-800 border-r p-4 rounded-md">
-      <h2 className="text-xl font-bold mb-6 text-gray-800 dark:text-white">
-        Navigation
-      </h2>
+    <aside className="w-64 min-h-[80vh] bg-gradient-to-r from-gray-200 to-gray-100  bg-gray-300  p-4 rounded-md">
+      <h2 className="text-xl font-bold mb-6 text-gray-500">Navigation</h2>
       <nav className="flex flex-col space-y-2">
-        {navItems.map(({ path, label }) => (
+        {/* {navItems.map(({ path, label }) => (
           <NavLink
             key={path}
             to={path}
@@ -29,7 +27,59 @@ const BlogSidebar = () => {
           >
             {label}
           </NavLink>
-        ))}
+        ))} */}
+
+        <Link to="/" className="text-gray-400 font-semibold">
+          Home
+        </Link>
+        <div className="dropdown dropdown-hover text-gray-400 font-semibold">
+          <div tabIndex={0} role="button" className="bt -1">
+            Chefs
+          </div>
+          <ul
+            tabIndex={0}
+            className="dropdown-content menu bg-base-100 rounded-bo z-1 w-52 p-2 shadow-sm text-gray-600"
+          >
+            <li>
+              <NavLink to="/chefs">Chefs</NavLink>
+            </li>
+            <li>
+              <NavLink to="/chefs/register">Register as Chef</NavLink>
+            </li>
+          </ul>
+        </div>
+        <div className="dropdown dropdown-hover text-gray-400 font-semibold">
+          <div tabIndex={0} role="button" className="bt -1">
+            Blogs
+          </div>
+          <ul
+            tabIndex={0}
+            className="dropdown-content menu bg-base-100 rounded-bo z-1 w-52 p-2 shadow-sm text-gray-600"
+          >
+            <li>
+              <NavLink to="/blogs">Blogs</NavLink>
+            </li>
+            <li>
+              <NavLink to="/blogs/create">Create Blog</NavLink>
+            </li>
+          </ul>
+        </div>
+        <div className="dropdown dropdown-hover text-gray-400">
+          <div tabIndex={0} role="button" className="bt -1">
+            Recipe market
+          </div>
+          <ul
+            tabIndex={0}
+            className="dropdown-content menu bg-base-100 rounded-bo z-1 w-52 p-2 shadow-sm text-gray-600"
+          >
+            <li>
+              <NavLink to="/chefs">Chefs</NavLink>
+            </li>
+            <li>
+              <NavLink to="/chefs/register">Register as Chef</NavLink>
+            </li>
+          </ul>
+        </div>
       </nav>
     </aside>
   );
