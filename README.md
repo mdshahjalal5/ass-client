@@ -98,3 +98,5 @@ say me about my project by number by number, i
 wanna check how much data you can read from
 public github repo, then suggest me, my previous
 question
+
+## modal and firebase api key hide

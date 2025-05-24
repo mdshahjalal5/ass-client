@@ -69,6 +69,8 @@
 │   ├── index.css
 │   ├── Layout
 │   │   ├── AuthLayout.jsx
+│   │   ├── BlogsLayout.jsx
+│   │   ├── ChefLayout.jsx
 │   │   └── Layout.jsx
 │   ├── main.jsx
 │   ├── modules
@@ -76,8 +78,13 @@
 │   │   │   ├── blog.constant.js
 │   │   │   ├── BlogDetails.jsx
 │   │   │   ├── Blog.jsx
-│   │   │   └── Blogs.jsx
+│   │   │   ├── BlogSidebar.jsx
+│   │   │   ├── Blogs.jsx
+│   │   │   └── CreateBlog.jsx
 │   │   └── chef
+│   │       ├── ChefChekout.jsx
+│   │       ├── chef.constant.js
+│   │       ├── ChefDetails.jsx
 │   │       └── Chefs.jsx
 │   ├── package.json
 │   ├── pages
@@ -107,4 +114,4 @@
 ├── structure.md
 └── vite.config.js
 
-18 directories, 90 files
+18 directories, 97 files

@@ -17,8 +17,8 @@ const links = [
   },
 
   {
-    label: "Profile",
-    path: "/my-profile",
+    label: "Chefs",
+    path: "/chefs",
   },
 ];
 

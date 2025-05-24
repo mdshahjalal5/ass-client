@@ -26,7 +26,7 @@ const Blog = ({ blog }) => {
         </div>
         <div className="mt-4">
           <Link
-            to={`/blog/${blog.id}`}
+            to={`/blogs/${blog.id}`}
             className="text-orange-600 hover:underline font-medium"
           >
             Read More → ↪️

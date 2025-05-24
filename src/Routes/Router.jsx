@@ -23,6 +23,12 @@ import Blogs from "../modules/blogs/Blogs";
 import BlogDetails from "../modules/blogs/BlogDetails";
 import BlogsLayout from "../Layout/BlogsLayout";
 import CreateBlog from "../modules/blogs/CreateBlog";
+import ChefLayout from "../Layout/ChefLayout";
+import Chefs from "../modules/chef/Chefs";
+import ChefDetails from "../modules/chef/ChefDetails";
+import ChefChekout from "../modules/chef/ChefChekout";
+import UpdateChef from "../modules/chef/UpdateChef";
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -151,7 +157,6 @@ export const router = createBrowserRouter([
   {
     path: "/blogs",
     Component: BlogsLayout,
-    errorElement: <h2>error</h2>,
     children: [
       {
         index: true,
@@ -164,6 +169,28 @@ export const router = createBrowserRouter([
       {
         path: "create",
         element: <CreateBlog />,
+      },
+    ],
+  },
+  {
+    path: "/chefs",
+    Component: ChefLayout,
+    children: [
+      {
+        index: true,
+        element: <Chefs />,
+      },
+      {
+        path: ":id",
+        element: <ChefDetails />,
+      },
+      {
+        path: "update/:id",
+        element: <UpdateChef />,
+      },
+      {
+        path: "checkout/:id",
+        element: <ChefChekout />,
       },
     ],
   },

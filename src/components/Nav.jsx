@@ -20,6 +20,7 @@ const Nav = () => {
   const { pathname } = useLocation();
   const isBlogsRoute = pathname.startsWith("/blogs");
   const isChefsRoute = pathname.startsWith("/chefs");
+  console.log(isChefsRoute, isBlogsRoute, isMobile, "Nav.jsx", 23);
 
   // const isMobile= ;
   console.log(pathname, "Nav.jsx", 17);
@@ -66,7 +67,9 @@ const Nav = () => {
             <div
               onClick={() => setOpen(!open)}
               className={`lg:hidden text-gray-700  ${
-                isMobile && isBlogsRoute && isChefsRoute ? "" : "hidden"
+                isMobile && (isBlogsRoute || isChefsRoute || "/")
+                  ? ""
+                  : "hidden"
               }`}
             >
               <button>
