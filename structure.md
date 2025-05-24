@@ -14,7 +14,6 @@
 ├── PKGBUILD
 ├── public
 │   ├── CNAME
-│   ├── data2.json
 │   └── vite.svg
 ├── README.md
 ├── requirement.md
@@ -74,18 +73,33 @@
 │   │   └── Layout.jsx
 │   ├── main.jsx
 │   ├── modules
+│   │   ├── auth
+│   │   │   └── authRoutes.jsx
 │   │   ├── blogs
 │   │   │   ├── blog.constant.js
 │   │   │   ├── BlogDetails.jsx
 │   │   │   ├── Blog.jsx
+│   │   │   ├── blogRoute.jsx
 │   │   │   ├── BlogSidebar.jsx
 │   │   │   ├── Blogs.jsx
 │   │   │   └── CreateBlog.jsx
-│   │   └── chef
-│   │       ├── ChefChekout.jsx
-│   │       ├── chef.constant.js
-│   │       ├── ChefDetails.jsx
-│   │       └── Chefs.jsx
+│   │   ├── chef
+│   │   │   ├── ChefChekout.jsx
+│   │   │   ├── chef.constant.js
+│   │   │   ├── ChefDetails.jsx
+│   │   │   ├── chefRoute.jsx
+│   │   │   ├── Chefs.jsx
+│   │   │   ├── CreateChef.jsx
+│   │   │   └── UpdateChef.jsx
+│   │   ├── recipe
+│   │   │   └── recipeRoutes.jsx
+│   │   └── RecipieMarket
+│   │       ├── IngredientCard.jsx
+│   │       ├── ingredient.constant.js
+│   │       ├── IngredientDetails.jsx
+│   │       ├── MarketHome.jsx
+│   │       ├── RecipeMarketLayout.jsx
+│   │       └── RecipeMarkteRoutes.jsx
 │   ├── package.json
 │   ├── pages
 │   │   ├── About.jsx
@@ -114,4 +128,4 @@
 ├── structure.md
 └── vite.config.js
 
-18 directories, 97 files
+21 directories, 108 files

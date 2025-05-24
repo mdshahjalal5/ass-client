@@ -107,7 +107,7 @@ const Nav = () => {
             }}
             className="border px-1 py-1 rounded-full bg-gray-500 text-white scale-85"
           >
-            {themeLight ? <Sun /> : <Moon />}
+            {!themeLight ? <Sun /> : <Moon />}
           </button>
         </div>
       </nav>

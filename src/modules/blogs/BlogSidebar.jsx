@@ -64,19 +64,19 @@ const BlogSidebar = () => {
             </li>
           </ul>
         </div>
-        <div className="dropdown dropdown-hover text-gray-400">
+        <div className="dropdown dropdown-hover text-gray-400 font-semibold">
           <div tabIndex={0} role="button" className="bt -1">
-            Recipe market
+            Recipe Store
           </div>
           <ul
             tabIndex={0}
-            className="dropdown-content menu bg-base-100 rounded-bo z-1 w-52 p-2 shadow-sm text-gray-600"
+            className="dropdown-content menu bg-base-100 rounded-bo z-1 w-52 p-2 shadow-sm"
           >
             <li>
-              <NavLink to="/chefs">Chefs</NavLink>
+              <NavLink to="/recipe-market">Recipe Store</NavLink>
             </li>
             <li>
-              <NavLink to="/chefs/register">Register as Chef</NavLink>
+              <NavLink to="/blogs/create">Sell ingredients</NavLink>
             </li>
           </ul>
         </div>

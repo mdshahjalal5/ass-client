@@ -11,7 +11,7 @@ const ChefDetails = () => {
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md">
+    <div className="max-w-4xl mt-16 mx-auto p-6 bg-white rounded-lg shadow-md">
       <div className="flex flex-col md:flex-row items-center">
         <img
           src={chef.avatar}

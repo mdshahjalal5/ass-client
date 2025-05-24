@@ -1,5 +1,6 @@
 import { useParams } from "react-router";
 import { chefs } from "./chef.constant";
+import toast from "react-hot-toast";
 
 const Checkout = () => {
   const { id } = useParams();
@@ -12,11 +13,13 @@ const Checkout = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Implement booking logic here
-    alert(`Booking confirmed for ${chef.name}!`);
+    toast.success(`🎉 Booking confirmed for ${chef.name}!`, {
+      duration: 3000,
+    });
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-md">
+    <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-md mt-10">
       <h1 className="text-2xl font-bold mb-4">Checkout</h1>
       <div className="mb-4">
         <p className="text-lg font-semibold">{chef.name}</p>

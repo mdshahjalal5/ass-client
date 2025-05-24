@@ -66,15 +66,22 @@ const Menu = ({ className, isExternal }) => {
           </li>
         </ul>
       </div>
-      {/* <details className="dropdown">
-        <summary className="btn m-1">open or close</summary>
-        <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-          <li></li>
+      <div className="dropdown dropdown-hover">
+        <div tabIndex={0} role="button" className="bt -1">
+          Recipe Store
+        </div>
+        <ul
+          tabIndex={0}
+          className="dropdown-content menu bg-base-100 rounded-bo z-1 w-52 p-2 shadow-sm"
+        >
           <li>
-            <a>Item 2</a>
+            <NavLink to="/recipe-market">Recipe Store</NavLink>
+          </li>
+          <li>
+            <NavLink to="/blogs/create">Sell ingredients</NavLink>
           </li>
         </ul>
-      </details> */}
+      </div>
     </ul>
   );
 };

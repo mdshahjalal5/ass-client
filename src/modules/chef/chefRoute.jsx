@@ -4,6 +4,7 @@ import PrivateRoute from "../../Routes/PrivateRoute";
 import ChefDetails from "./ChefDetails";
 import Chefs from "./Chefs";
 import UpdateChef from "./UpdateChef";
+import CreateChef from "./CreateChef";
 
 export const chefRooute = {
   path: "/chefs",
@@ -26,6 +27,14 @@ export const chefRooute = {
       element: (
         <PrivateRoute>
           <UpdateChef />
+        </PrivateRoute>
+      ),
+    },
+    {
+      path: "register",
+      element: (
+        <PrivateRoute>
+          <CreateChef />
         </PrivateRoute>
       ),
     },
