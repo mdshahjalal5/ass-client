@@ -102,7 +102,7 @@ const UpdateRecipe = () => {
 
   if (loading)
     return (
-      <h2 className="text-center mt-8 text-sky-500 text-xl font-semibold">
+      <h2 className="text-center mt-8 text-sky-500 text-xl max-sm:text-xs font-semibold">
         Loading...
       </h2>
     );
@@ -114,7 +114,7 @@ const UpdateRecipe = () => {
       </Helmet>
       <form
         onSubmit={handleSubmit}
-        className="p-8 max-w-2xl mx-auto bg-white shadow-lg rounded-lg space-y-6 text-gray-400"
+        className="p-8 max-w-2xl mx-auto bg-white shadow-lg rounded-lg space-y-6 text-gray-400 max-sm:[&_*]:text-sm"
       >
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-4">
           Update Recipe

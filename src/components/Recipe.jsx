@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import Button from "./Button";
 import Swal from "sweetalert2";
+import UpdateRecipe from "../pages/UpdateRecipe";
 
 const Recipe = ({ recipe, setRecipes = () => {}, recipes = [] }) => {
   const navigate = useNavigate();
@@ -40,41 +41,55 @@ const Recipe = ({ recipe, setRecipes = () => {}, recipes = [] }) => {
     }
   };
   return (
-    <div className="rounded-lg shadow hover:shadow-md transition duration-300 max-w-[350px] shadow-xl bg-gradient-to-b from-gray-300 to-gray-100 max-sm:min-w-[300px]">
-      <img
-        src={image || "https://via.placeholder.com/400x250?text=No+Image"}
-        // alt={title}
-        onError={() => setIsImageValid(false)}
-        className="w-[200px] object-cover rounded-xl shadow-xl mx-auto mt-2 max-h-[200px]"
-      />
+    <>
+      <div className="rounded-lg shadow hover:shadow-md transition duration-300 max-w-[350px] shadow-xl bg-gradient-to-b from-gray-300 to-gray-100 max-sm:min-w-[300px]">
+        <img
+          src={image || "https://via.placeholder.com/400x250?text=No+Image"}
+          // alt={title}
+          onError={() => setIsImageValid(false)}
+          className="w-[200px] object-cover rounded-xl shadow-xl mx-auto mt-2 max-h-[200px]"
+        />
 
-      <div className="p-4 space-y-2">
-        <h3 className="text-lg font-semibold dark:text-sky-400">{title}</h3>
-        <p className="text-sm text-gray-600">Cuisine: {cuisine}</p>
-        <p className="text-sm text-gray-600">Likes: {likeCount}</p>
-        {pathname == "/my-recipes" && (
-          <div className="flex gap-3 flex-col">
-            <div className="flex-1 text-white">
-              <Link to={`/update/${recipe._id}`}>
+        <div className="p-4 space-y-2">
+          <h3 className="text-lg font-semibold dark:text-sky-400">{title}</h3>
+          <p className="text-sm text-gray-600">Cuisine: {cuisine}</p>
+          <p className="text-sm text-gray-600">Likes: {likeCount}</p>
+          {pathname == "/my-recipes" && (
+            <div className="flex gap-3 flex-col">
+              <div
+                className="flex-1 text-white"
+                onClick={() =>
+                  document.getElementById("my_modal_1").showModal()
+                }
+              >
+                {/* <Link to={`/update/${recipe._id}`}></Link> */}
                 <Button label={"Update "} className={"w-full"} />
-              </Link>
+              </div>
+              <div
+                onClick={() => hanldeDelete(recipe?._id)}
+                className="flex-1  text-white "
+              >
+                <Button label={"Delete"} className={"flex-1 w-full"} />
+              </div>
             </div>
-            <div
-              onClick={() => hanldeDelete(recipe?._id)}
-              className="flex-1  text-white "
-            >
-              <Button label={"Delete"} className={"flex-1 w-full"} />
-            </div>
-          </div>
-        )}
-        <button
-          className="w-full btn btn-outline btn-primary 500   rounded hover:bg-purple-700 text-sm rounded-full"
-          onClick={() => navigate(`/recipes/${recipe._id}`)}
-        >
-          View Details
-        </button>
+          )}
+          <button
+            className="w-full btn btn-outline btn-primary 500   rounded hover:bg-purple-700 text-sm rounded-full"
+            onClick={() => navigate(`/recipes/${recipe._id}`)}
+          >
+            View Details
+          </button>
+        </div>
       </div>
-    </div>
+      <dialog id="my_modal_1" className="modal">
+        <div className="modal-box max-h-[90vh]">
+          <form>
+            <button>X</button>
+          </form>
+          <UpdateRecipe />
+        </div>
+      </dialog>
+    </>
   );
 };
 
