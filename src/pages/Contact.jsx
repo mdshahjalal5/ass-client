@@ -14,7 +14,7 @@ const Contact = () => {
 
   const handleNewsletterSubmit = (e) => {
     e.preventDefault();
-    console.log("Subscribed:", email);
+    // console.log("Subscribed:", email);
     setEmail("");
   };
 

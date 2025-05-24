@@ -12,14 +12,14 @@ const CreateRecipeIngredient = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log("Ingredient Data:", data);
+    // console.log("Ingredient Data:", data);
     toast.success("Ingredient added successfully! 🌿", { duration: 3000 });
     // reset(); // Clear form
   };
 
   return (
     <div className="max-w-3xl mx-auto p-8 bg-white  rounded-xl shadow-md mt-10">
-      <h2 className="text-3xl font-bold mb-6 text-center text-green-600">
+      <h2 className="text-3xl max-sm:text-2xl font-bold mb-6 text-center text-green-600">
         📦 Add Ingredient for Sale
       </h2>
 

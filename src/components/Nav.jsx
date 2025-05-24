@@ -18,12 +18,12 @@ const Nav = () => {
   const { user, logout, loading } = useContext(AuthContext);
 
   const { pathname } = useLocation();
-  const isBlogsRoute = pathname.startsWith("/blogs");
-  const isChefsRoute = pathname.startsWith("/chefs");
-  console.log(isChefsRoute, isBlogsRoute, isMobile, "Nav.jsx", 23);
+  // const isBlogsRoute = pathname.startsWith("/blogs");
+  // const isChefsRoute = pathname.startsWith("/chefs");
+  // console.log(isChefsRoute, isBlogsRoute, isMobile, "Nav.jsx", 23);
 
   // const isMobile= ;
-  console.log(pathname, "Nav.jsx", 17);
+  // console.log(pathname, "Nav.jsx", 17);
   return (
     <header className="p-4  max-container sticky z-10 top-2">
       <nav className="flex items-center justify-between  p-2 rounded-xl sticky z-[1000] bg-gradient-to-r from-gray-50 to-gray-200">

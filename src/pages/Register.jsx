@@ -11,7 +11,7 @@ const RegisterPage = () => {
   const { createUser, updateUser, googleLogin } = useContext(AuthContext);
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
-  console.log(from, "Register.jsx", 12);
+  // console.log(from, "Register.jsx", 12);
 
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);

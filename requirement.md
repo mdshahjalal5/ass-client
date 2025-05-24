@@ -41,3 +41,8 @@ VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain
 # and so on...
 
 ```
+
+client side code: https://github.com/shahjalal-labs/ass-client
+server side code: https://github.com/shahjalal-labs/10miass
+client side live: https://flavorbook.surge.sh/
+server side live: https://worlds-recipes-sharing-server.vercel.app/
