@@ -11,7 +11,7 @@ const MyRecipes = () => {
   const [recipes, setRecipes] = useState([]);
 
   const { data, loading } = useFetch(
-    `https://recipesharingserverpr.vercel.app/api/v1/recipes?email=${user?.email}&limit=0`,
+    `https://worlds-recipes-sharing-server.vercel.app/api/v1/recipes?email=${user?.email}&limit=0`,
   );
   useEffect(() => {
     if (data) {

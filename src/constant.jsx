@@ -49,6 +49,87 @@ export const feedbacks = [
     rating: 4,
     avatar: "https://i.pravatar.cc/100?img=7",
   },
+
+  {
+    name: "Rafi",
+    comment:
+      "Love how personalized everything feels. It’s like my digital cookbook! 📘💖",
+    emoji: "🍲",
+    rating: 5,
+    avatar: "https://i.pravatar.cc/100?img=20",
+  },
+  {
+    name: "Mehnaz",
+    comment:
+      "Just wow! The ingredient lists are so organized and helpful! 🧄🧂🛒",
+    emoji: "🧆",
+    rating: 4,
+    avatar: "https://i.pravatar.cc/100?img=11",
+  },
+  {
+    name: "Karim",
+    comment:
+      "Even my kids enjoy using FlavorBook to pick dinner recipes. Fun and useful! 👨‍👩‍👧‍👦",
+    emoji: "🍕",
+    rating: 5,
+    avatar: "https://i.pravatar.cc/100?img=16",
+  },
+  {
+    name: "Farzana",
+    comment:
+      "Bookmarking recipes has never been easier! 🔖 So intuitive and sleek.",
+    emoji: "🥘",
+    rating: 4,
+    avatar: "https://i.pravatar.cc/100?img=15",
+  },
+  {
+    name: "Noman",
+    comment:
+      "I’m actually saving money by cooking with these recipes. Win-win! 💸👨‍🍳",
+    emoji: "🥓",
+    rating: 5,
+    avatar: "https://i.pravatar.cc/100?img=19",
+  },
+  {
+    name: "Lamia",
+    comment:
+      "Every recipe feels like a culinary adventure. ✨🌍 Keep it up, FlavorBook!",
+    emoji: "🍣",
+    rating: 5,
+    avatar: "https://i.pravatar.cc/100?img=13",
+  },
+  {
+    name: "Hasib",
+    comment:
+      "The step-by-step cooking animations are brilliant! So helpful. 🎬🍳",
+    emoji: "🍜",
+    rating: 5,
+    avatar: "https://i.pravatar.cc/100?img=17",
+  },
+  {
+    name: "Rumana",
+    comment:
+      "I enjoy writing and sharing my recipes here. Feels like home! 🏡❤️",
+    emoji: "🧁",
+    rating: 4,
+    avatar: "https://i.pravatar.cc/100?img=21",
+  },
+  {
+    name: "Abir",
+    comment:
+      "Dark mode, animations, and chef booking? FlavorBook has everything! 🚀",
+    emoji: "🍤",
+    rating: 5,
+    avatar: "https://i.pravatar.cc/100?img=22",
+  },
+  {
+    name: "Nilufa",
+    comment:
+      "I’ve recommended this app to all my foodie friends. Big fan! 👩‍🍳💬",
+    emoji: "🍨",
+    rating: 4,
+    avatar: "https://i.pravatar.cc/100?img=23",
+  },
 ];
 export const faqs = [
   {

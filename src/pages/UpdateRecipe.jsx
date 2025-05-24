@@ -17,7 +17,7 @@ const UpdateRecipe = () => {
   const navigate = useNavigate();
 
   const { data, loading } = useFetch(
-    `https://recipesharingserverpr.vercel.app/api/v1/recipe/${id}`,
+    `https://worlds-recipes-sharing-server.vercel.app/api/v1/recipe/${id}`,
   );
   const recipe = data?.data;
 
@@ -74,7 +74,7 @@ const UpdateRecipe = () => {
     };
 
     const res = await fetch(
-      `https://recipesharingserverpr.vercel.app/api/v1/recipe/${id}`,
+      `https://worlds-recipes-sharing-server.vercel.app/api/v1/recipe/${id}`,
       {
         method: "PATCH",
         headers: {

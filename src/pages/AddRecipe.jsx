@@ -47,7 +47,7 @@ const AddRecipe = () => {
     };
 
     const response = await fetch(
-      `https://recipesharingserverpr.vercel.app/api/v1/create-recipe`,
+      `https://worlds-recipes-sharing-server.vercel.app/api/v1/create-recipe`,
       {
         method: "POST",
         headers: {
@@ -293,7 +293,7 @@ const AddRecipe = () => {
     };
 
     const response = await fetch(
-      `https://recipesharingserverpr.vercel.app/api/v1/create-recipe`,
+      `https://worlds-recipes-sharing-server.vercel.app/api/v1/create-recipe`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
